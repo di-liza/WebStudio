@@ -1,0 +1,54 @@
+.tasks {
+    @include section-padding();
+    width: auto;
+
+    @media screen and (max-width:1600px) {
+            display: none;
+        }
+}
+
+.tasks__title {
+    @extend %section-title;
+}
+
+.tasks__list {
+    @extend %list;
+    
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    width: 1200px;
+    margin: 0;
+    padding: 0;
+    
+    gap: $card-set-gap-margin;
+}
+
+.tasks__item {
+    position: relative;
+    flex-basis: calc((100% - 60px) / 3);
+}
+
+.tasks__thumb .tasks__text {
+    opacity: 1;
+}
+
+.tasks__label {
+    @extend %flex-container-center;
+    position: absolute;
+
+    width: 100%;
+    height: 70px;
+    bottom: 0;
+    right: 0;
+
+    background: rgba(47, 48, 58, 0.8);
+}
+
+.tasks__subtitle {
+    color: $primary-white-color;
+    line-height: 1.172;
+    font-size: 14px;
+    text-transform: uppercase;
+}
