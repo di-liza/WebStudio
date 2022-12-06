@@ -6,7 +6,7 @@
     @media screen and (min-width:480px) {
         @include section-mob-tabl-padding;
     }
-    @media screen and (min-width:1600px) {
+    @media screen and (min-width:1200px) {
         @include section-padding ($p-bott: 0);
     }
 }
@@ -17,20 +17,20 @@
     @extend %list;
     margin: 0;
     padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: $card-set-gap-margin;
     
     @media screen and (min-width:480px) {
         width: 450px;
     }
     @media screen and (min-width:768px) {
-        display: flex;
-        flex-wrap: wrap;
         align-items: flex-start;
-        justify-content: center;
-        gap: $card-set-gap-margin;
         
         width: 738px;
     }
-    @media screen and (min-width:1600px) {
+    @media screen and (min-width:1200px) {
         width: 1200px;
     }
 
@@ -38,20 +38,11 @@
 
 .features__item {
     width: 270px;
-
-    @media screen and (min-width:480px) {
-        &:not(:last-child){
-            margin-bottom: 30px;
-        }
-    }
     @media screen and (min-width:768px) {
         flex-basis: calc((100% - 30px) / 2);
-        &:not(:last-child) {
-                margin-bottom: 0;
-            }
     }
     
-    @media screen and (min-width:1600px) {
+    @media screen and (min-width:1200px) {
         flex-basis: calc((100% - 90px) / 4);
     }
 }

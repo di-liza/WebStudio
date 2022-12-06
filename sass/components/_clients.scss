@@ -1,6 +1,10 @@
 .clients {
     @include section-padding ();
     width: auto;
+    @media screen and (min-width:480px) {
+            @include section-mob-tabl-padding;
+    }
+    
 }
 .clients__title{
     @extend %section-title;
@@ -8,35 +12,42 @@
 .clients__list {
     @extend %list;
     @extend %flex-container-center;
-    gap: $card-set-gap-margin;
+    gap: $card-set-gap-margin;   
+    flex-wrap: wrap;
 
-    @media screen and (min-width:480px) {
-        width: 450px;
-    }
-    
     @media screen and (min-width:768px) {
-        width: 738px;
+        width: 768px;
     }
-    
-    @media screen and (min-width:1600px) {
-        width: 1170px;
+    @media screen and (min-width:1200px) {
+        width: 1200px;
     }
+        
 }
 .clients__item{
-    @media screen and (min-width:480px) {
-        flex-basis: calc((100% - 30px)/2);
+    flex-basis: calc((100% - 30px)/2);
+    
+    @media screen and (min-width:768px) {
+        flex-basis: calc((100% - 60px)/3);
     }
     
-    @media screen and (min-width:768px) {}
-    
-    @media screen and (min-width:1600px) {}
+    @media screen and (min-width:1200px) {
+        flex-basis: calc((100% - 150px)/6);
+    }
 }
 .clients__link {
     @extend %link;
     @extend %flex-container-center;
 
-    width: 170px;
     height: 92px;
+    width: 210px;
+    
+    @media screen and (min-width:768px) {
+        width: 226px;
+    }
+    
+    @media screen and (min-width:1200px) {
+        width: 170px;
+        }
 
     border: 1px solid #afb1b8;
     border-radius: 4px;
