@@ -1369,7 +1369,6 @@ img {
   .footer__container {
     -ms-flex-wrap: nowrap;
         flex-wrap: nowrap;
-    width: 1200px;
   }
 }
 
