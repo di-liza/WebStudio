@@ -1064,7 +1064,7 @@ img {
 }
 @media screen and (min-width: 768px) {
   .team__list {
-    width: 768px;
+    width: 738px;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -1352,11 +1352,11 @@ img {
   -webkit-box-align: baseline;
       -ms-flex-align: baseline;
           align-items: baseline;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
 }
 @media screen and (min-width: 480px) {
   .footer__container {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
     width: 450px;
   }
 }
@@ -1367,48 +1367,59 @@ img {
 }
 @media screen and (min-width: 1200px) {
   .footer__container {
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
     width: 1200px;
   }
 }
 
-.footer__links-container {
+@media screen and (min-width: 768px) {
+  .footer__links {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
+    width: 603px;
+  }
+}
+
+.footer__links--container {
   width: 231px;
 }
-@media screen and (min-width: 480px) {
-  .footer__links-container {
+@media screen and (max-width: 1200px) {
+  .footer__links--container {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     margin-bottom: 60px;
   }
 }
 @media screen and (min-width: 1200px) {
-  .footer__links-container {
-    margin-right: 70px;
+  .footer__links--container {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
   }
 }
 
+.footer__socials {
+  text-align: center;
+}
 @media screen and (min-width: 480px) {
   .footer__socials {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
     width: 206px;
     margin-bottom: 60px;
   }
@@ -1435,16 +1446,19 @@ img {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 @media screen and (min-width: 1200px) {
   .footer__list {
-    width: 1200px;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    width: 246px;
   }
 }
 
@@ -1488,18 +1502,15 @@ img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 @media screen and (min-width: 480px) {
   .subscribe-form {
     width: 450px;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -1509,6 +1520,8 @@ img {
             align-items: flex-end;
     width: 570px;
     margin-left: 93px;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
   }
 }
 
@@ -1526,6 +1539,13 @@ img {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .subscribe-form__containtainer {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
   }
 }
 
@@ -1551,7 +1571,7 @@ img {
   background-color: #2f303a;
   color: #ffffff;
 }
-@media screen and (min-width: 480px) {
+@media screen and (max-width: 1200px) {
   .subscribe-form__data {
     margin-bottom: 20px;
   }
