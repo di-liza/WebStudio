@@ -427,12 +427,18 @@ img {
 }
 
 .header__nav {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+@media screen and (max-width: 768px) {
+  .header__nav {
+    width: 100%;
+  }
 }
 
 .navigator-menu {
@@ -448,6 +454,11 @@ img {
   background-color: transparent;
   font-family: inherit;
   cursor: pointer;
+}
+@media screen and (min-width: 768px) {
+  .navigator-menu {
+    display: none;
+  }
 }
 
 .navigator-menu__cross {
@@ -466,7 +477,6 @@ img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  gap: 50px;
   margin-top: 0;
   margin-bottom: 0;
   font-weight: 500;
@@ -480,6 +490,7 @@ img {
   .header__list {
     margin-left: 87px;
     opacity: 1;
+    gap: 50px;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -491,8 +502,6 @@ img {
 
 .header__link {
   display: block;
-  padding-top: 32px;
-  padding-bottom: 32px;
   color: #212121;
   letter-spacing: 0.02em;
   font-size: 14px;
@@ -504,6 +513,17 @@ img {
 }
 .header__link:hover, .header__link:focus {
   color: #2196f3;
+}
+@media screen and (max-width: 768px) {
+  .header__link {
+    padding: 0;
+  }
+}
+@media screen and (min-width: 768px) {
+  .header__link {
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
 }
 
 /* Виділення поточної сторінки кольором*/

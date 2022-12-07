@@ -10,8 +10,13 @@
     border-bottom: 1px solid #ececec;
 }
 .header__nav {
+    position: relative;
     display: flex;
-    align-items: center;   
+    align-items: center;
+    @media screen and (max-width:768px){
+        width: 100%;   
+        
+    }
 }
 
 .navigator-menu{
@@ -31,6 +36,9 @@
 
     cursor: pointer;
 
+    @media screen and(min-width:768px) {
+        display: none;
+    }
 
 }
 .navigator-menu__cross {
@@ -51,7 +59,7 @@
 .header__list {
     @extend %list;
     display: flex;
-    gap: 50px;
+    
 
     margin-top: 0;
     margin-bottom: 0;
@@ -60,11 +68,29 @@
     
     @media screen and (min-width:468px) {
         opacity: 0;
-        
     }
+    // @media screen and (max-width:768px) {
+    //     position: absolute;
+    //     display: flex;
+    //     flex-wrap: wrap;
+    //     align-items: center;
+    //     justify-content: center;
+    //     flex-direction: column-reverse;
+    //     top: 100%;
+    //     left: 0;
+    //     width: 100%;
+    //     text-align: center;
+    //     background-color: rgb(255, 255, 255);
+    //     display: none;
+
+    //     &.is-open{
+    //         display: block;
+    //     }
+    // }
     @media screen and (min-width:768px) {
         margin-left: 87px;
         opacity: 1;
+        gap: 50px;
     }
     @media screen and (min-width:1200px) {
         margin-left: 93px;
@@ -75,8 +101,7 @@
 .header__link {
     @extend %link;
     display: block;
-    padding-top: 32px;
-    padding-bottom: 32px;
+
 
     color: $title-text-color;
     letter-spacing: 0.02em;
@@ -90,6 +115,15 @@
     &:focus {
         color: $accent-color;
     }
+
+        @media screen and (max-width:768px) {
+            padding: 0;
+        }
+
+                 @media screen and (min-width:768px) {
+                        padding-top: 32px;
+                            padding-bottom: 32px;
+                 }
 }
 
 
