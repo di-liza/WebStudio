@@ -347,7 +347,7 @@ img {
 }
 @media screen and (min-width: 768px) {
   .container {
-    width: 768px;
+    width: 798px;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -442,7 +442,6 @@ img {
   gap: 50px;
   margin-top: 0;
   margin-bottom: 0;
-  margin-left: 93px;
   font-weight: 500;
 }
 @media screen and (min-width: 468px) {
@@ -452,11 +451,13 @@ img {
 }
 @media screen and (min-width: 768px) {
   .header__list {
+    margin-left: 87px;
     opacity: 1;
   }
 }
 @media screen and (min-width: 1200px) {
   .header__list {
+    margin-left: 93px;
     opacity: 1;
   }
 }
@@ -507,11 +508,26 @@ img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: baseline;
-      -ms-flex-align: baseline;
-          align-items: baseline;
-  gap: 50px;
-  margin-left: auto;
+}
+@media screen and (min-width: 768px) {
+  .header__contact-container {
+    gap: 10px;
+    -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin-left: 96px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .header__contact-container {
+    -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
+    gap: 50px;
+    margin-left: auto;
+  }
 }
 
 .header__contact-link {
@@ -1062,17 +1078,6 @@ img {
       flex-wrap: wrap;
   gap: 30px;
 }
-@media screen and (min-width: 768px) {
-  .team__list {
-    width: 738px;
-  }
-}
-@media screen and (min-width: 1200px) {
-  .team__list {
-    width: 1170px;
-  }
-}
-
 .team__list img {
   margin-bottom: 30px;
 }
@@ -1400,17 +1405,10 @@ img {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    margin-bottom: 60px;
-  }
-}
-@media screen and (min-width: 1200px) {
-  .footer__links--container {
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: flex-start;
+    margin-bottom: 60px;
   }
 }
 
@@ -1429,6 +1427,8 @@ img {
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: flex-start;
+    text-align: left;
+    margin-left: 70px;
   }
 }
 

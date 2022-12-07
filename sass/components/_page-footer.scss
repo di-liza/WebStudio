@@ -38,12 +38,11 @@
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
-        align-items: center;
-        margin-bottom: 60px;
-    }
-    @media screen and (min-width:1200px) {
         align-items: flex-start;
-    }
+
+        // margin-right: 70px;
+        margin-bottom: 60px;
+}
 }
 .footer__socials {
     text-align: center;
@@ -55,6 +54,8 @@
     @media screen and (min-width:1200px) {
         display: inline-block;
         align-items: flex-start;
+        text-align: left;
+        margin-left: 70px;
     }
 }
 .footer__address {

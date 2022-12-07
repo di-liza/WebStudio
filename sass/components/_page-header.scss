@@ -21,17 +21,19 @@
 
     margin-top: 0;
     margin-bottom: 0;
-    margin-left: 93px;
-
+    
     font-weight: 500;
+    
     @media screen and (min-width:468px) {
-    opacity: 0;
-       
+        opacity: 0;
+        
     }
     @media screen and (min-width:768px) {
+        margin-left: 87px;
         opacity: 1;
     }
     @media screen and (min-width:1200px) {
+        margin-left: 93px;
         opacity: 1;
     }
 }
@@ -90,10 +92,21 @@
 
 .header__contact-container {
     display: flex;
-    align-items: baseline;
-    gap: 50px;
-
-    margin-left: auto;
+    
+    
+    @media screen and (min-width:768px) {
+        gap: 10px;
+        align-items: baseline;
+        flex-wrap: wrap;
+        margin-left: 96px;
+        
+    }
+    
+    @media screen and (min-width:1200px) {
+        align-items: baseline;
+        gap: 50px;
+        margin-left: auto;
+    }
 }
 
 .header__contact-link {
