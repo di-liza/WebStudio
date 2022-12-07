@@ -435,6 +435,33 @@ img {
           align-items: center;
 }
 
+.navigator-menu {
+  display: inline-block;
+  padding: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-right: 0;
+  margin-left: 270px;
+  height: 40px;
+  width: 40px;
+  border: none;
+  background-color: transparent;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+.navigator-menu__cross {
+  display: none;
+}
+
+.navigator-menu.is-open .navigator-menu__cross {
+  display: block;
+}
+
+.navigator-menu.is-open .navigator-menu__menu {
+  display: none;
+}
+
 .header__list {
   display: -webkit-box;
   display: -ms-flexbox;
