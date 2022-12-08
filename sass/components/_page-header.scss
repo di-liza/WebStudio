@@ -18,7 +18,7 @@
     }
 }
 
-.navigator-menu{
+.header__menu{
     position: absolute;
     display: inline-block;
     padding: 0;
@@ -37,21 +37,16 @@
     @media screen and(min-width: $tablet) {
         display: none;
     }
-
 }
-.navigator-menu__cross {
+.header__menu.is-open .header__icon-menu{
+    display: none;
+}
+.header__icon-cross {
     display: none;
 }
 
-.navigator-menu.is-open {
-    .navigator-menu__cross {
-        display: block;
-    }
-}
-.navigator-menu.is-open {
-    .navigator-menu__menu {
-        display: none;
-    }
+.header__menu.is-open .header__icon-cross {
+    display: block;
 }
 
 .header__list {

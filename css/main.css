@@ -440,7 +440,7 @@ img {
   }
 }
 
-.navigator-menu {
+.header__menu {
   position: absolute;
   display: inline-block;
   padding: 0;
@@ -455,21 +455,21 @@ img {
   cursor: pointer;
 }
 @media screen and (min-width: 768px) {
-  .navigator-menu {
+  .header__menu {
     display: none;
   }
 }
 
-.navigator-menu__cross {
+.header__menu.is-open .header__icon-menu {
   display: none;
 }
 
-.navigator-menu.is-open .navigator-menu__cross {
+.header__icon-cross {
+  display: none;
+}
+
+.header__menu.is-open .header__icon-cross {
   display: block;
-}
-
-.navigator-menu.is-open .navigator-menu__menu {
-  display: none;
 }
 
 .header__list {
