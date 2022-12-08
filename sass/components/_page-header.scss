@@ -48,6 +48,22 @@
 .header__menu.is-open .header__icon-cross {
     display: block;
 }
+.menu-container{
+    position: absolute;
+    width: 100%;
+    height: 300px;
+    padding: 10px;
+
+    text-align: center;
+    font-size: 25px;
+
+    background-color: burlywood;
+
+    display: none;
+    &.is-open{
+        display: block;
+    }
+}
 
 .header__list {
     @extend %list;

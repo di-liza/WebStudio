@@ -53,12 +53,19 @@
           </li>
         </ul>
       </div>
-      <button class="header__menu" type="button" data-menu-button aria-expanded="false">
+      <button
+        class="header__menu"
+        type="button"
+        data-menu-button
+        aria-expanded="false"
+        aria-controls="menu-container"
+      >
         <svg width="40" height="40" aria-label="Перемикач мобільного меню">
           <use class="header__icon-menu" href="./images/icons.svg#menu"></use>
           <use class="header__icon-cross" href="./images/icons.svg#cross"></use>
         </svg>
       </button>
+      <div class="menu-container" id="menu-container" data-menu>Menu</div>
     </header>
     <main>
       <section class="hero overlay">
