@@ -9,24 +9,23 @@
     background-color: $primary-white-color;
     border-bottom: 1px solid #ececec;
 }
+
 .header__nav {
-    position: relative;
     display: flex;
     align-items: center;
-    @media screen and (max-width:768px){
+    @media screen and (max-width: $tablet){
         width: 100%;   
         
     }
 }
 
 .navigator-menu{
+    position: absolute;
     display: inline-block;
     padding: 0;
-    margin-top: 0;
-    margin-bottom: 0;
-    margin-right: 0;
-    margin-left: 270px;
-
+    margin: 0;
+    top: 22px;
+    right: 15px;
     height: 40px;
     width: 40px;
 
@@ -36,7 +35,7 @@
 
     cursor: pointer;
 
-    @media screen and(min-width:768px) {
+    @media screen and(min-width: $tablet) {
         display: none;
     }
 
@@ -66,7 +65,7 @@
     
     font-weight: 500;
     
-    @media screen and (min-width:468px) {
+    @media screen and (min-width:$mobile) {
         opacity: 0;
     }
     // @media screen and (max-width:768px) {
@@ -87,12 +86,12 @@
     //         display: block;
     //     }
     // }
-    @media screen and (min-width:768px) {
+    @media screen and (min-width: $tablet) {
         margin-left: 87px;
         opacity: 1;
         gap: 50px;
     }
-    @media screen and (min-width:1200px) {
+    @media screen and (min-width: $desctop) {
         margin-left: 93px;
         opacity: 1;
     }
@@ -116,11 +115,11 @@
         color: $accent-color;
     }
 
-        @media screen and (max-width:768px) {
+        @media screen and (max-width: $tablet) {
             padding: 0;
         }
 
-                 @media screen and (min-width:768px) {
+                 @media screen and (min-width: $tablet) {
                         padding-top: 32px;
                             padding-bottom: 32px;
                  }
@@ -162,7 +161,7 @@
     display: flex;
     
     
-    @media screen and (min-width:768px) {
+    @media screen and (min-width: $tablet) {
         gap: 10px;
         align-items: baseline;
         flex-wrap: wrap;
@@ -170,7 +169,7 @@
         
     }
     
-    @media screen and (min-width:1200px) {
+    @media screen and (min-width: $desctop) {
         align-items: baseline;
         gap: 50px;
         margin-left: auto;

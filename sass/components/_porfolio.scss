@@ -7,19 +7,19 @@
     flex-wrap: wrap;
     
     margin-bottom: 50px;
-    @media screen and (min-width:480px) {
+    @media screen and (min-width: $mobile) {
         column-gap: 8px;
         row-gap: 15px;
     }
-    @media screen and (max-width:768px) {
+    @media screen and (max-width:$tablet) {
         width: 400px;
     }
-    @media screen and (min-width:768px) {
+    @media screen and (min-width:$tablet) {
         justify-content: center;
         gap: 8px;
     }
 
-    @media screen and (min-width:1200px) {
+    @media screen and (min-width:$desctop) {
         justify-content: center;
         align-items: center;
     }

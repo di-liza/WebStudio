@@ -3,10 +3,10 @@
     width: auto;
     padding-bottom: 0;
     
-    @media screen and (min-width:480px) {
+    @media screen and (min-width: $mobile) {
         @include section-mob-tabl-padding;
     }
-    @media screen and (min-width:1200px) {
+    @media screen and (min-width: $desctop) {
         @include section-padding ($p-bott: 0);
     }
 }
@@ -22,27 +22,27 @@
     justify-content: center;
     gap: $card-set-gap-margin;
     
-    @media screen and (min-width:480px) {
+    @media screen and (min-width: $mobile) {
         width: 450px;
     }
-    @media screen and (min-width:768px) {
+    @media screen and (min-width:$tablet) {
         align-items: flex-start;
         
         width: 738px;
     }
-    @media screen and (min-width:1200px) {
-        width: 1200px;
+    @media screen and (min-width: $desctop) {
+        width:  $desctop;
     }
 
 }
 
 .features__item {
     width: 270px;
-    @media screen and (min-width:768px) {
+    @media screen and (min-width:$tablet) {
         flex-basis: calc((100% - 30px) / 2);
     }
     
-    @media screen and (min-width:1200px) {
+    @media screen and (min-width: $desctop) {
         flex-basis: calc((100% - 90px) / 4);
     }
 }

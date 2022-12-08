@@ -4,14 +4,14 @@
     
     
     
-    @media screen and (min-width:480px) {
+    @media screen and (min-width:$mobile) {
         width: 450px;
         flex-wrap: wrap;
     }
-    @media screen and (min-width:768px) {
+    @media screen and (min-width:$tablet) {
         
     }
-    @media screen and (min-width:1200px) {
+    @media screen and (min-width:$desctop) {
         align-items: flex-end;
         width: 570px;
         margin-left: 93px;
@@ -20,14 +20,14 @@
 }
 
 .subscribe-form__containtainer{
-    @media screen and (min-width:480px) {
+    @media screen and (min-width:$mobile) {
         width: 450px;
         display: flex;
         flex-wrap: wrap;
         align-items: center;
         justify-content: center;
         }
-    @media screen and (min-width:1200px) {
+    @media screen and (min-width:$desctop) {
         justify-content: flex-start;
     }
 }
@@ -57,10 +57,10 @@
 
     color: $primary-white-color;
     
-    // @media screen and (min-width:480px){
+    // @media screen and (min-width:$mobile){
     //     margin-bottom: 20px;
     // }
-    @media screen and (max-width:1200px) {
+    @media screen and (max-width: $desctop) {
         margin-bottom: 20px;
     }
 }
