@@ -12,8 +12,15 @@
 .clients__list {
     @extend %list;
     @extend %flex-container-center;
+    display: flex;
     gap: $card-set-gap-margin;   
     flex-wrap: wrap;
+
+    @media screen and (min-width:$mobile) {
+        width: $mobile;
+        margin-left: auto;
+        margin-right: auto;
+        }
 
     @media screen and (min-width:$tablet) {
         width: $tablet;
