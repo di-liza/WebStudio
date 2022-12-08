@@ -3,7 +3,7 @@
     width: auto;
     padding-bottom: 0;
     
-    @media screen and (min-width: $mobile) {
+    @media screen and (max-width: $desctop) {
         @include section-mob-tabl-padding;
     }
     @media screen and (min-width: $desctop) {
@@ -21,13 +21,8 @@
     flex-wrap: wrap;
     justify-content: center;
     gap: $card-set-gap-margin;
-    
-    @media screen and (min-width: $mobile) {
-        width: 450px;
-    }
     @media screen and (min-width:$tablet) {
         align-items: flex-start;
-        
         width: 738px;
     }
     @media screen and (min-width: $desctop) {

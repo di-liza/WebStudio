@@ -11,12 +11,13 @@
     display: flex;
     justify-content: center;
     align-items: baseline;
-    @media screen and (min-width:480px){
+    
+    @media screen and (max-width: $desctop){
         flex-wrap: wrap;
-        width: 450px;
+
     }
     @media screen and (min-width: $tablet) {
-        width: 603px;
+        
     }
     @media screen and (min-width: $desctop) {
         flex-wrap: nowrap;
@@ -27,7 +28,7 @@
         display: flex;
         justify-content: space-between;
         align-items: baseline;
-        width: 603px;
+        width: 596px;
     }
 
 }
@@ -44,9 +45,10 @@
 }
 .footer__socials {
     text-align: center;
-    @media screen and (min-width: $mobile) {
+    @media screen and (max-width: $tablet) {
         width: 206px;
         margin-bottom: 60px;
+        // margin-left: 165px;
     }
 
     @media screen and (min-width: $desctop) {
@@ -67,7 +69,7 @@
 }
 .footer__list{
     @extend %list;
-    @media screen and (min-width: $mobile) {}
+    @media screen and (max-width: $tablet) {}
     display: flex;
     flex-wrap: wrap;
     justify-content: center;

@@ -7,13 +7,12 @@
     flex-wrap: wrap;
     
     margin-bottom: 50px;
-    @media screen and (min-width: $mobile) {
+    @media screen and (max-width: $tablet) {
         column-gap: 8px;
         row-gap: 15px;
-    }
-    @media screen and (max-width:$tablet) {
         width: 400px;
     }
+    
     @media screen and (min-width:$tablet) {
         justify-content: center;
         gap: 8px;
