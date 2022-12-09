@@ -17,11 +17,11 @@
     @extend %list;
     margin: 0;
     padding: 0;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
     gap: $card-set-gap-margin;
     @media screen and (min-width:$tablet) {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
         align-items: flex-start;
         width: 738px;
     }
@@ -32,8 +32,13 @@
 }
 
 .features__item {
-    width: 270px;
+    @media screen and (max-width:$tablet){
+        &:not(:last-child){
+            margin-bottom: 30px;
+        }
+    }
     @media screen and (min-width:$tablet) {
+        width: 270px;
         flex-basis: calc((100% - 30px) / 2);
     }
     

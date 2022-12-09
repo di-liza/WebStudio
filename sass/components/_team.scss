@@ -18,19 +18,23 @@
     margin-top: 16px;
 }
 .team__title{
-    @extend %section-title;
+    @include section-title ($f-z: 28px); 
+
+    @media screen and (min-width:$desctop){
+        @include section-title ($f-z: 36px)
+
+    }
+
 }
 .team__list {
     @extend %list;
-    margin: 0;
-    padding: 0;
 
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: $card-set-gap-margin;
-
+  
     @media screen and (min-width:$tablet) {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: $card-set-gap-margin;
         width: 738px;
     }
     @media screen and (min-width:$desctop) {
@@ -55,6 +59,11 @@
         0px 2px 1px rgba(0, 0, 0, 0.2);
 
 
+    @media screen and (max-width:$tablet) {
+            &:not(:last-child) {
+                margin-bottom: 30px;
+            }
+        }
     @media screen and (min-width:$tablet) {
         flex-basis: calc((100% - 30px)/2);
      

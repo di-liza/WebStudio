@@ -6,3 +6,13 @@
     padding-top: 60px;
     padding-bottom: 60px;
 }
+@mixin section-title ($f-z:28px){
+    margin-top: 0;
+    margin-bottom: 50px;
+
+    color: $title-text-color;
+    font-size: $f-z;
+    line-height: 1.17;
+    font-weight: 700;
+    text-align: center;
+}

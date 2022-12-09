@@ -36,7 +36,7 @@
   margin: -1px;
 }
 
-.clients__title, .team__title, .tasks__title {
+.tasks__title {
   margin-top: 0;
   margin-bottom: 50px;
   color: #212121;
@@ -974,18 +974,18 @@ img {
 .features__list {
   margin: 0;
   padding: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   gap: 30px;
 }
 @media screen and (min-width: 768px) {
   .features__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: flex-start;
@@ -998,11 +998,14 @@ img {
   }
 }
 
-.features__item {
-  width: 270px;
+@media screen and (max-width: 768px) {
+  .features__item:not(:last-child) {
+    margin-bottom: 30px;
+  }
 }
 @media screen and (min-width: 768px) {
   .features__item {
+    width: 270px;
     -ms-flex-preferred-size: calc((100% - 30px) / 2);
         flex-basis: calc((100% - 30px) / 2);
   }
@@ -1120,21 +1123,38 @@ img {
   margin-top: 16px;
 }
 
-.team__list {
-  margin: 0;
-  padding: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  gap: 30px;
+.team__title {
+  margin-top: 0;
+  margin-bottom: 50px;
+  color: #212121;
+  font-size: 28px;
+  line-height: 1.17;
+  font-weight: 700;
+  text-align: center;
 }
+@media screen and (min-width: 1200px) {
+  .team__title {
+    margin-top: 0;
+    margin-bottom: 50px;
+    color: #212121;
+    font-size: 36px;
+    line-height: 1.17;
+    font-weight: 700;
+    text-align: center;
+  }
+}
+
 @media screen and (min-width: 768px) {
   .team__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    gap: 30px;
     width: 738px;
   }
 }
@@ -1158,6 +1178,11 @@ img {
   border-radius: 4px;
   -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
           box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+}
+@media screen and (max-width: 768px) {
+  .team__item:not(:last-child) {
+    margin-bottom: 30px;
+  }
 }
 @media screen and (min-width: 768px) {
   .team__item {
@@ -1201,35 +1226,48 @@ img {
   }
 }
 
+.clients__title {
+  margin-top: 0;
+  margin-bottom: 50px;
+  color: #212121;
+  font-size: 28px;
+  line-height: 1.17;
+  font-weight: 700;
+  text-align: center;
+}
+@media screen and (min-width: 1200px) {
+  .clients__title {
+    margin-top: 0;
+    margin-bottom: 50px;
+    color: #212121;
+    font-size: 36px;
+    line-height: 1.17;
+    font-weight: 700;
+    text-align: center;
+  }
+}
+
 .clients__list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   gap: 30px;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
 @media screen and (min-width: 480px) {
   .clients__list {
-    width: 480px;
     margin-left: auto;
     margin-right: auto;
   }
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 1200px) {
   .clients__list {
-    width: 768px;
+    width: 738px;
   }
 }
-@media screen and (min-width: 1200px) {
-  .clients__list {
-    width: 1200px;
+@media screen and (max-width: 768px) {
+  .clients__item {
+    -ms-flex-preferred-size: calc((100% - 30px) / 2);
+        flex-basis: calc((100% - 30px) / 2);
   }
-}
-
-.clients__item {
-  -ms-flex-preferred-size: calc((100% - 30px) / 2);
-      flex-basis: calc((100% - 30px) / 2);
 }
 @media screen and (min-width: 768px) {
   .clients__item {
@@ -1532,7 +1570,7 @@ img {
 .footer__links--container {
   width: 231px;
 }
-@media screen and (min-width: 480px) {
+@media screen and (max-width: 1200px) {
   .footer__links--container {
     margin-bottom: 60px;
   }

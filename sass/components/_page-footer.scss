@@ -31,14 +31,14 @@
 }
 .footer__links--container{
     width: 231px;
-    @media screen and (min-width: $mobile){
+    @media screen and (max-width:$desctop){
         margin-bottom: 60px;
     }
     @media screen and (max-width: $tablet){
         margin-left: auto;
         margin-right: auto;
     }
-    @media screen and (min-width: $tablet) { 
+    @media screen and (min-width: $tablet){ 
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
