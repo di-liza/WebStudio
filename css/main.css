@@ -46,7 +46,7 @@
   text-align: center;
 }
 
-.subscribe-button, .clients__link, .clients__list, .tasks__label, .features__icon-thumb, .socials__link {
+.clients__link, .clients__list, .tasks__label, .features__icon-thumb, .socials__link {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -340,9 +340,9 @@ img {
   padding-left: 15px;
   padding-right: 15px;
 }
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 480px) {
   .container {
-    width: 100%;
+    width: 480px;
   }
 }
 @media screen and (min-width: 768px) {
@@ -366,9 +366,9 @@ img {
 }
 
 .socials__list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   gap: 10px;
 }
 
@@ -445,7 +445,7 @@ img {
   display: inline-block;
   padding: 0;
   margin: 0;
-  top: 22px;
+  top: 10px;
   right: 15px;
   height: 40px;
   width: 40px;
@@ -1483,9 +1483,6 @@ img {
 }
 
 .footer {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   width: auto;
   padding-top: 60px;
   padding-bottom: 60px;
@@ -1493,18 +1490,19 @@ img {
 }
 
 .footer__container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: baseline;
-      -ms-flex-align: baseline;
-          align-items: baseline;
+  text-align: center;
 }
-@media screen and (max-width: 1200px) {
+@media screen and (min-width: 768px) {
   .footer__container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
   }
@@ -1534,7 +1532,18 @@ img {
 .footer__links--container {
   width: 231px;
 }
-@media screen and (max-width: 1200px) {
+@media screen and (min-width: 480px) {
+  .footer__links--container {
+    margin-bottom: 60px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .footer__links--container {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+@media screen and (min-width: 768px) {
   .footer__links--container {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1547,7 +1556,13 @@ img {
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: flex-start;
-    margin-bottom: 60px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .footer__links--container {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
   }
 }
 
@@ -1556,7 +1571,6 @@ img {
 }
 @media screen and (max-width: 768px) {
   .footer__socials {
-    width: 206px;
     margin-bottom: 60px;
   }
 }
@@ -1636,20 +1650,18 @@ img {
   font-weight: 700;
 }
 
-.subscribe-form {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  text-align: center;
-}
-@media screen and (max-width: 1200px) {
+@media screen and (min-width: 768px) {
   .subscribe-form {
-    width: 450px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    text-align: center;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
+    width: 450px;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -1664,9 +1676,8 @@ img {
   }
 }
 
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 768px) {
   .subscribe-form__containtainer {
-    width: 450px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1729,9 +1740,16 @@ img {
 }
 
 .subscribe-button {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  align-items: center;
   margin-left: 12px;
   width: 200px;
   height: 50px;

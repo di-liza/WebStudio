@@ -12,7 +12,7 @@
 }
 .socials__list {
     @extend %list;
-    display: flex;
+    display: inline-flex;
     gap: 10px;
 }
 

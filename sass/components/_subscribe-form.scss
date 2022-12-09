@@ -1,12 +1,18 @@
 .subscribe-form {
-    display: flex;
-    justify-content: center;
-    text-align: center;
     
-    
-    @media screen and (max-width:$desctop) {
-        width: 450px;
+    @media screen and (min-width:$tablet){
+        display: flex;
+        justify-content: center;
+        text-align: center;
         flex-wrap: wrap;
+        width: 450px;
+        
+    }
+    // @media screen and (max-width: $tablet) {
+    //     // margin-left: auto;
+    //     // margin-right: auto;
+    // }
+    @media screen and (max-width:$desctop) {
     }
 
     @media screen and (min-width:$desctop) {
@@ -18,13 +24,16 @@
 }
 
 .subscribe-form__containtainer{
-    @media screen and (min-width:$mobile) {
-        width: 450px;
-        display: flex;
-        flex-wrap: wrap;
-        align-items: center;
-        justify-content: center;
-        }
+    // @media screen and (max-width:$tablet) {
+    //     
+    // }
+    @media screen and (min-width:$tablet){
+      
+       display: flex;
+       flex-wrap: wrap;
+       align-items: center;
+       justify-content: center;
+   }
     @media screen and (min-width:$desctop) {
         justify-content: flex-start;
     }
@@ -69,7 +78,9 @@
 }
 
 .subscribe-button {
-    @extend %flex-container-center;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
     align-items: center;
     margin-left: 12px;
     width: 200px;
