@@ -20,17 +20,9 @@
     flex-wrap: wrap;
 
     @media screen and (min-width:$mobile) {
-        // width: $mobile;
         margin-left: auto;
         margin-right: auto;
         }
-
-    @media screen and (min-width:$tablet)and (max-width:$desctop) {
-        width: 738px;
-    }
-    @media screen and (min-width:$desctop) {
-        // width: $desctop;
-    }
         
 }
 .clients__item{
@@ -46,23 +38,15 @@
     }
 }
 .clients__link {
-    @extend %link;
-    @extend %flex-container-center;
-
     height: 92px;
-    width: 210px;
-    
-    @media screen and (min-width: $tablet) {
-        width: 226px;
-    }
-    
-    @media screen and (min-width: $desctop) {
-        width: 170px;
-        }
+
+    @extend %flex-container-center;
+    @extend %link;
+   
+    color: #afb1b8;
 
     border: 1px solid #afb1b8;
     border-radius: 4px;
-    color: #afb1b8;
 
     transition: color 250ms $timing-function, border 250ms $timing-function;
 
