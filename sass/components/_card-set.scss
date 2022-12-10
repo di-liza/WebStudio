@@ -10,12 +10,12 @@
         
     }
     @media screen and (max-width: $tablet) {
-        width: 450px;
+        // width: 450px;
     }
     @media screen and (min-width: $tablet) {
         display: flex;
         flex-wrap: wrap;
-        width: 738px;
+        // width: 738px;
     }
     @media screen and (min-width: $desctop) {
         width:  $desctop;

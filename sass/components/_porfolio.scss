@@ -10,7 +10,7 @@
     @media screen and (max-width: $tablet) {
         column-gap: 8px;
         row-gap: 15px;
-        width: 400px;
+        max-width: 400px;
     }
     
     @media screen and (min-width:$tablet) {
