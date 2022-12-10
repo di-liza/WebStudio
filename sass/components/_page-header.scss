@@ -90,9 +90,10 @@
     margin-top: 0;
     margin-bottom: 0;
     font-weight: 500;
-  
+
     @media screen and (min-width: $tablet) {
-            gap: 50px;
+        gap: 50px;
+        
     }
     
 }
