@@ -1,12 +1,12 @@
 @charset "UTF-8";
-.footer__list, .card-set, .porfolio__filter, .clients__list, .team__list, .tasks__list, .features__list, .header__list, .socials__list {
+.footer__list, .card-set, .porfolio__filter, .clients__list, .team__list, .tasks__list, .features__list, .menu-container .header__contact, .menu-container .header__list, .socials__list {
   padding: 0;
   margin: 0;
   margin: 0;
   list-style: none;
 }
 
-.footer__contact, .footer__location, .card-set__link, .clients__link, .header__contact-link, .header__link, .logo, .socials__link {
+.footer__contact, .footer__location, .card-set__link, .clients__link, .menu-container .header__contact-link, .menu-container .header__link, .logo, .socials__link {
   text-decoration: none;
   color: #757575;
 }
@@ -421,6 +421,7 @@ img {
   top: 0;
   left: 0;
   width: 100%;
+  height: 80px;
   z-index: 1;
   background-color: #ffffff;
   border-bottom: 1px solid #ececec;
@@ -472,21 +473,59 @@ img {
   display: block;
 }
 
+.menu-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 11170px;
+}
+
 .menu-container {
-  position: absolute;
-  width: 100%;
-  height: 300px;
-  padding: 10px;
+  background-color: #fff;
   text-align: center;
-  font-size: 25px;
-  background-color: burlywood;
-  display: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  /* Виділення поточної сторінки кольором*/
+  /* Виділення і псевдостани посилань на сторінки*/
 }
 .menu-container.is-open {
   display: block;
 }
-
-.header__list {
+@media screen and (max-width: 768px) {
+  .menu-container {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 300px;
+    padding: 10px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .menu-container {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-left: 87px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .menu-container {
+    margin-left: 97px;
+  }
+}
+.menu-container .block {
+  width: 100px;
+  height: 100px;
+  margin: 10px;
+  background-color: cadetblue;
+}
+.menu-container .header__list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -494,26 +533,37 @@ img {
   margin-bottom: 0;
   font-weight: 500;
 }
-@media screen and (max-width: 768px) {
-  .header__list {
-    opacity: 0;
-  }
-}
 @media screen and (min-width: 768px) {
-  .header__list {
-    margin-left: 87px;
-    opacity: 1;
+  .menu-container .header__list {
     gap: 50px;
   }
 }
-@media screen and (min-width: 1200px) {
-  .header__list {
-    margin-left: 93px;
-    opacity: 1;
+.menu-container .header__contact {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+@media screen and (min-width: 768px) and (max-width: 1200px) {
+  .menu-container .header__contact {
+    gap: 10px;
+    -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin-left: 90px;
   }
 }
-
-.header__link {
+@media screen and (min-width: 1200px) {
+  .menu-container .header__contact {
+    -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
+    gap: 30px;
+    margin-left: 315px;
+  }
+}
+.menu-container .header__link {
   display: block;
   color: #212121;
   letter-spacing: 0.02em;
@@ -524,27 +574,25 @@ img {
   -webkit-transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
           transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
 }
-.header__link:hover, .header__link:focus {
+.menu-container .header__link:hover, .menu-container .header__link:focus {
   color: #2196f3;
 }
 @media screen and (max-width: 768px) {
-  .header__link {
+  .menu-container .header__link {
     padding: 0;
   }
 }
 @media screen and (min-width: 768px) {
-  .header__link {
+  .menu-container .header__link {
     padding-top: 32px;
     padding-bottom: 32px;
   }
 }
-
-/* Виділення поточної сторінки кольором*/
-.header__link--active {
+.menu-container .header__link--active {
   position: relative;
   color: #2196f3;
 }
-.header__link--active::after {
+.menu-container .header__link--active::after {
   position: absolute;
   bottom: -1px;
   left: 0;
@@ -554,43 +602,39 @@ img {
   border-radius: 2px;
   background-color: #2196f3;
 }
-
-/* Виділення і псевдостани посилань на сторінки*/
-.header__contact-link {
+.menu-container .header__contact-link {
   color: #757575;
   fill: #757575;
   letter-spacing: 0.02em;
   font-weight: 500;
   font-size: 14px;
 }
-
-.header__contact-container {
+.menu-container .header__contact-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
-@media screen and (min-width: 768px) {
-  .header__contact-container {
+@media screen and (min-width: 768px) and (max-width: 1200px) {
+  .menu-container .header__contact-container {
     gap: 10px;
     -webkit-box-align: baseline;
         -ms-flex-align: baseline;
             align-items: baseline;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-    margin-left: 96px;
+    margin-left: 90px;
   }
 }
 @media screen and (min-width: 1200px) {
-  .header__contact-container {
+  .menu-container .header__contact-container {
     -webkit-box-align: baseline;
         -ms-flex-align: baseline;
             align-items: baseline;
     gap: 50px;
-    margin-left: auto;
+    margin-left: 315px;
   }
 }
-
-.header__contact-link {
+.menu-container .header__contact-link {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -598,17 +642,15 @@ img {
       -ms-flex-align: center;
           align-items: center;
 }
-
-.header__contact-icon {
+.menu-container .header__contact-icon {
   fill: currentColor;
   margin-right: 10px;
 }
-
-.header__contact-link {
+.menu-container .header__contact-link {
   -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.header__contact-link:hover, .header__contact-link:focus {
+.menu-container .header__contact-link:hover, .menu-container .header__contact-link:focus {
   color: #2196f3;
 }
 
@@ -1125,7 +1167,6 @@ img {
           justify-content: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  width: 1200px;
   margin: 0;
   padding: 0;
   gap: 30px;
