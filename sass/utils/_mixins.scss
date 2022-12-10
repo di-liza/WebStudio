@@ -2,10 +2,6 @@
     padding-top: $p-top;
     padding-bottom: $p-bott;
 }
-@mixin section-mob-tabl-padding () {
-    padding-top: 60px;
-    padding-bottom: 60px;
-}
 @mixin section-title ($f-z:28px){
     margin-top: 0;
     margin-bottom: 50px;
@@ -16,3 +12,5 @@
     font-weight: 700;
     text-align: center;
 }
+
+

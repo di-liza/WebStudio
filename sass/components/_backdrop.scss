@@ -17,6 +17,11 @@
 
     opacity: 1;
     transition: opacity 250ms $timing-function;
+    overflow-y: scroll;
+
+    @media screen and (max-width:$desctop){
+        padding: 93px 15px 94px 15px;
+    }
 }
 
 .backdrop.backdrop.is-hidden .modal {

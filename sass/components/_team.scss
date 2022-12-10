@@ -4,7 +4,7 @@
     width: 100%;
     
     @media screen and (max-width: $desctop) {
-        @include section-mob-tabl-padding;
+        @include section-padding ($p-top: 60px, $p-bott: 60px);
     }
     @media screen and (min-width:$desctop) {
         @include section-padding ();

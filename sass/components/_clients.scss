@@ -1,8 +1,8 @@
 .clients {
     @include section-padding ();
-    width: auto;
+
     @media screen and (max-width: $desctop) {
-            @include section-mob-tabl-padding;
+            @include section-padding ($p-top: 60px, $p-bott: 60px);
     }
     
 }
