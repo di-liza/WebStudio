@@ -19,8 +19,36 @@
         width: 100%;   
     }
 }
+.menu {
+    background-color: #fff;
+    text-align: center;
+    display: flex;
 
-.header__menu{
+    &.is-open {
+        display: block;
+    }
+
+    @media screen and(max-width:$tablet) {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        padding: 48px 40px;
+    }
+
+    @media screen and(min-width:$tablet) {
+        align-items: center;
+        margin-left: 87px;
+    }
+
+    @media screen and(min-width:$desctop) {
+
+        margin-left: 97px;
+    }
+}
+.menu-btn{
     position: absolute;
     display: inline-block;
     padding: 0;
@@ -40,52 +68,17 @@
         display: none;
     }
 }
-.header__menu.is-open .header__icon-menu{
+.menu-btn.is-open .menu-btn__icon-menu{
     display: none;
 }
-.header__icon-cross {
+.menu-btn__icon-cross {
     display: none;
 }
 
-.header__menu.is-open .header__icon-cross {
+.menu-btn.is-open .menu-btn__icon-cross {
     display: block;
 }
-.menu-box{
-    display: flex;
-    align-items: center;
-    width: 11170px;
-}
-.menu-container{
-    background-color: #fff;
-    text-align: center;
-    display: flex;
-    
-    &.is-open{
-        display: block;
-    }
-    @media screen and(max-width:$tablet){
-        display: none;
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        padding: 48px 40px;
-    }
-    @media screen and(min-width:$tablet){
-       align-items: center;
-       margin-left: 87px;   
-    }   
-    @media screen and(min-width:$desctop) {
-        
-        margin-left: 97px;
-    }}
-.block{
-    width: 100px;
-    height:100px;
-    margin: 10px;
-    background-color: cadetblue;
-}
+
 .header__list {
     @extend %list;
     display: flex;
@@ -164,8 +157,6 @@
             margin-left: 315px;
         }
 }
-
-
 
 /* Виділення поточної сторінки кольором*/
 .header__link--active {
@@ -255,24 +246,3 @@
     margin-right: 10px;
 }
 
-.menu__socials{
-    @extend %list;
-    display: flex;
-    @media screen and(min-width:$tablet){
-        display: none;
-    }
-
-}
-.menu__item{
-    border-right: 1px solid rgba(33, 33, 33, 0.2);
-}
-.menu__link{
-    @extend %link;
-    font-weight: 500;
-    font-size: 18px;
-    line-height: calc(22/18);
-    color: $accent-color;
-    padding-left: 10px;
-    padding-right: 10px;
-    text-align: left;
-}

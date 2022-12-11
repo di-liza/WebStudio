@@ -1,0 +1,86 @@
+.menu {
+    background-color: #fff;
+    text-align: center;
+    display: flex;
+
+    &.is-open {
+        display: block;
+    }
+
+    @media screen and(max-width:$tablet) {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        padding: 48px 40px;
+    }
+
+    @media screen and(min-width:$tablet) {
+        align-items: center;
+        margin-left: 87px;
+    }
+
+    @media screen and(min-width:$desctop) {
+
+        margin-left: 97px;
+    }
+}
+
+.menu-btn {
+    position: absolute;
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+    top: 22px;
+    right: 15px;
+    height: 40px;
+    width: 40px;
+
+    border: none;
+    background-color: transparent;
+    font-family: inherit;
+
+    cursor: pointer;
+
+    @media screen and(min-width: $tablet) {
+        display: none;
+    }
+}
+
+.menu-btn.is-open .menu-btn__icon-menu {
+    display: none;
+}
+
+.menu-btn__icon-cross {
+    display: none;
+}
+
+.menu-btn.is-open .menu-btn__icon-cross {
+    display: block;
+}
+.menu-socials {
+    @extend %list;
+    display: flex;
+
+    @media screen and(min-width:$tablet) {
+        display: none;
+    }
+
+}
+
+.menu-socials__item {
+    border-right: 1px solid rgba(33, 33, 33, 0.2);
+}
+
+.menu-socials__link {
+    @extend %link;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: calc(22/18);
+    color: $accent-color;
+    padding-left: 10px;
+    padding-right: 10px;
+    text-align: left;
+}

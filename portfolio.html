@@ -19,11 +19,7 @@
         <a class="logo" href="./index.html">
           <span class="logo logo--color-blue">Web</span>Studio
         </a>
-        <div class="menu-container" id="menu-container" data-menu>
-          <!-- <div class="block"></div>
-          <div class="block"></div> -->
-
-          <!-- <div class="menu-box"> -->
+        <div class="menu" id="menu" data-menu>
           <nav class="header__nav">
             <ul class="header__list is-open">
               <li class="header__item">
@@ -59,34 +55,32 @@
               >
             </li>
           </ul>
-          <ul class="menu__socials">
-            <li class="menu__item">
-              <a href="" class="menu__link">Instagram</a>
+          <ul class="menu-socials">
+            <li class="menu-socials__item">
+              <a href="" class="menu-socials__link">Instagram</a>
             </li>
-            <li class="menu__item">
-              <a href="" class="menu__link">Twitter</a>
+            <li class="menu-socials__item">
+              <a href="" class="menu-socials__link">Twitter</a>
             </li>
-            <li class="menu__item">
-              <a href="" class="menu__link">Facebook</a>
+            <li class="menu-socials__item">
+              <a href="" class="menu-socials__link">Facebook</a>
             </li>
-            <li class="menu__item">
-              <a href="" class="menu__link">LinkedIn</a>
+            <li class="menu-socials__item">
+              <a href="" class="menu-socials__link">LinkedIn</a>
             </li>
           </ul>
-
-          <!-- </div> -->
         </div>
       </div>
       <button
-        class="header__menu"
+        class="menu-btn"
         type="button"
         data-menu-button
         aria-expanded="false"
-        aria-controls="menu-container"
+        aria-controls="menu"
       >
         <svg width="40" height="40" aria-label="Перемикач мобільного меню">
-          <use class="header__icon-menu" href="./images/icons.svg#menu"></use>
-          <use class="header__icon-cross" href="./images/icons.svg#cross"></use>
+          <use class="menu-btn__icon-menu" href="./images/icons.svg#menu"></use>
+          <use class="menu-btn__icon-cross" href="./images/icons.svg#cross"></use>
         </svg>
       </button>
     </header>
