@@ -5,6 +5,7 @@
 
     width: 100%;
     height: 80px;
+    display: flex;
 
     z-index: 1;
     background-color: $primary-white-color;
@@ -24,7 +25,7 @@
     display: inline-block;
     padding: 0;
     margin: 0;
-    top: 10px;
+    top: 22px;
     right: 15px;
     height: 40px;
     width: 40px;
@@ -58,26 +59,27 @@
     background-color: #fff;
     text-align: center;
     display: flex;
+    
     &.is-open{
         display: block;
     }
     @media screen and(max-width:$tablet){
         display: none;
-        position: absolute;
+        position: fixed;
         top: 0;
         left: 0;
         width: 100%;
-        height: 300px;
-        padding: 10px;
+        height: 100%;
+        padding: 48px 40px;
     }
     @media screen and(min-width:$tablet){
        align-items: center;
        margin-left: 87px;   
     }   
-    @media screen and(min-width:$tablet) {
+    @media screen and(min-width:$desctop) {
         
         margin-left: 97px;
-    }
+    }}
 .block{
     width: 100px;
     height:100px;
@@ -90,28 +92,25 @@
     margin-top: 0;
     margin-bottom: 0;
     font-weight: 500;
+    @media screen and (max-width: $tablet) {
+            flex-direction: column;
+            align-items: flex-start;
+        }
 
     @media screen and (min-width: $tablet) {
         gap: 50px;
-        
     }
     
 }
-.header__contact{
-    display: flex;
-    @extend %list;
-        @media screen and (min-width: $tablet) and (max-width: $desctop) {
-            gap: 10px;
-            align-items: baseline;
-            flex-wrap: wrap;
-            margin-left: 90px;
+.header__item{
+    @media screen and(max-width:$tablet){
+        &:nth-child(1) {
+            margin-bottom: 36px;
         }
-    
-        @media screen and (min-width: $desctop) {
-            align-items: baseline;
-            gap: 30px;
-            margin-left: 315px;
+        &:nth-child(2){
+            margin-bottom: 32px;
         }
+    }
 }
 .header__link {
     @extend %link;
@@ -120,8 +119,8 @@
 
     color: $title-text-color;
     letter-spacing: 0.02em;
-    font-size: 14px;
-    line-height: 1.17;
+
+    line-height: calc(46.88/40);
 
     transition: color 250ms $timing-function;
     transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
@@ -131,14 +130,39 @@
         color: $accent-color;
     }
 
-        @media screen and (max-width: $tablet) {
-            padding: 0;
-        }
+    @media screen and (max-width: $tablet) {
+        padding: 0;
+        font-size: 40px;
+    }
 
-                 @media screen and (min-width: $tablet) {
-                        padding-top: 32px;
-                            padding-bottom: 32px;
-                 }
+    @media screen and (min-width: $tablet) {
+        padding-top: 32px;
+        padding-bottom: 32px;
+        font-size: 14px;
+    }
+}
+.header-contact{
+    display: flex;
+    @extend %list;
+        @media screen and(max-width:$tablet){
+            flex-direction: column-reverse;
+            align-items: flex-start;
+            gap: 32px;
+            margin-bottom: 64px;
+            margin-top: auto;
+        }
+        @media screen and (min-width: $tablet) and (max-width: $desctop) {
+            gap: 10px;
+            align-items: baseline;
+            flex-wrap: wrap;
+            margin-left: 96px;
+        }
+    
+        @media screen and (min-width: $desctop) {
+            align-items: baseline;
+            gap: 30px;
+            margin-left: 315px;
+        }
 }
 
 
@@ -147,35 +171,67 @@
 .header__link--active {
     position: relative;
     color: $accent-color;
-
-    &::after{
-        position: absolute;
-        bottom: -1px;
-        left: 0;
-    
-        width: 100%;
-        height: 4px;
-    
-        content: '';
-        border-radius: 2px;
-        background-color: $accent-color;
+    @media screen and (min-width:$tablet){
+        
+            &::after{
+                position: absolute;
+                bottom: -1px;
+                left: 0;
+            
+                width: 100%;
+                height: 4px;
+            
+                content: '';
+                border-radius: 2px;
+                background-color: $accent-color;
+            }  
     }
-    
 }
 
 /* Виділення і псевдостани посилань на сторінки*/
-.header__contact-link {
+.header-contact__link {
     @extend %link;
     color: $primary-text-color;
     fill: $primary-text-color;
     letter-spacing: 0.02em;
     font-weight: 500;
-    font-size: 14px;
-}
+    line-height: calc(14.06/12);
+    display: flex;
+    align-items: center;
+    transition: color 250ms $timing-function;
 
+    &:hover,
+    &:focus {
+        color: $accent-color;
+    }
+   
+}
+.header-contact__link--big{
+    @media screen and (max-width:$tablet) {
+            font-size: 34px;
+            color: $accent-color;
+        }
+    @media screen and (min-width:$tablet) {
+            font-size: 12px;
+        }
+    
+        @media screen and (min-width:$desctop) {
+            font-size: 14px;
+        }
+}
+.header-contact__link--small{
+    @media screen and (max-width:$tablet){
+        font-size: 24px;
+    }
+@media screen and (min-width:$tablet) {
+        font-size: 12px;
+    }
+    @media screen and (min-width:$desctop) {
+        font-size: 14px;
+    }
+}
 .header__contact-container {
     display: flex;
-    
     
     @media screen and (min-width: $tablet) and (max-width: $desctop) {
         gap: 10px;
@@ -191,20 +247,32 @@
     }
 }
 
-.header__contact-link {
-    display: flex;
-    align-items: center;
-}
-
 .header__contact-icon {
+    @media screen and(max-width:$tablet){
+        display: none;
+    }
     fill: currentColor;
     margin-right: 10px;
 }
 
-.header__contact-link {
-    transition: color 250ms $timing-function;
-
-    &:hover, &:focus {
-        color: $accent-color;
+.menu__socials{
+    @extend %list;
+    display: flex;
+    @media screen and(min-width:$tablet){
+        display: none;
     }
-}}
+
+}
+.menu__item{
+    border-right: 1px solid rgba(33, 33, 33, 0.2);
+}
+.menu__link{
+    @extend %link;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: calc(22/18);
+    color: $accent-color;
+    padding-left: 10px;
+    padding-right: 10px;
+    text-align: left;
+}

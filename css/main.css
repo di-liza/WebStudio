@@ -1,12 +1,12 @@
 @charset "UTF-8";
-.footer__list, .card-set, .porfolio__filter, .clients__list, .team__list, .tasks__list, .features__list, .menu-container .header__contact, .menu-container .header__list, .socials__list {
+.footer__list, .card-set, .porfolio__filter, .clients__list, .team__list, .tasks__list, .features__list, .menu__socials, .header-contact, .header__list, .socials__list {
   padding: 0;
   margin: 0;
   margin: 0;
   list-style: none;
 }
 
-.footer__contact, .footer__location, .card-set__link, .clients__link, .menu-container .header__contact-link, .menu-container .header__link, .logo, .socials__link {
+.footer__contact, .footer__location, .card-set__link, .clients__link, .menu__link, .header-contact__link, .header__link, .logo, .socials__link {
   text-decoration: none;
   color: #757575;
 }
@@ -422,6 +422,9 @@ img {
   left: 0;
   width: 100%;
   height: 80px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   z-index: 1;
   background-color: #ffffff;
   border-bottom: 1px solid #ececec;
@@ -446,7 +449,7 @@ img {
   display: inline-block;
   padding: 0;
   margin: 0;
-  top: 10px;
+  top: 22px;
   right: 15px;
   height: 40px;
   width: 40px;
@@ -489,8 +492,6 @@ img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  /* Виділення поточної сторінки кольором*/
-  /* Виділення і псевдостани посилань на сторінки*/
 }
 .menu-container.is-open {
   display: block;
@@ -498,12 +499,12 @@ img {
 @media screen and (max-width: 768px) {
   .menu-container {
     display: none;
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    height: 300px;
-    padding: 10px;
+    height: 100%;
+    padding: 48px 40px;
   }
 }
 @media screen and (min-width: 768px) {
@@ -514,18 +515,20 @@ img {
     margin-left: 87px;
   }
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1200px) {
   .menu-container {
     margin-left: 97px;
   }
 }
-.menu-container .block {
+
+.block {
   width: 100px;
   height: 100px;
   margin: 10px;
   background-color: cadetblue;
 }
-.menu-container .header__list {
+
+.header__list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -533,29 +536,91 @@ img {
   margin-bottom: 0;
   font-weight: 500;
 }
+@media screen and (max-width: 768px) {
+  .header__list {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+}
 @media screen and (min-width: 768px) {
-  .menu-container .header__list {
+  .header__list {
     gap: 50px;
   }
 }
-.menu-container .header__contact {
+
+@media screen and (max-width: 768px) {
+  .header__item:nth-child(1) {
+    margin-bottom: 36px;
+  }
+  .header__item:nth-child(2) {
+    margin-bottom: 32px;
+  }
+}
+
+.header__link {
+  display: block;
+  color: #212121;
+  letter-spacing: 0.02em;
+  line-height: 1.172;
+  -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  -webkit-transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+          transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+.header__link:hover, .header__link:focus {
+  color: #2196f3;
+}
+@media screen and (max-width: 768px) {
+  .header__link {
+    padding: 0;
+    font-size: 40px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .header__link {
+    padding-top: 32px;
+    padding-bottom: 32px;
+    font-size: 14px;
+  }
+}
+
+.header-contact {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
+@media screen and (max-width: 768px) {
+  .header-contact {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    gap: 32px;
+    margin-bottom: 64px;
+    margin-top: auto;
+  }
+}
 @media screen and (min-width: 768px) and (max-width: 1200px) {
-  .menu-container .header__contact {
+  .header-contact {
     gap: 10px;
     -webkit-box-align: baseline;
         -ms-flex-align: baseline;
             align-items: baseline;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-    margin-left: 90px;
+    margin-left: 96px;
   }
 }
 @media screen and (min-width: 1200px) {
-  .menu-container .header__contact {
+  .header-contact {
     -webkit-box-align: baseline;
         -ms-flex-align: baseline;
             align-items: baseline;
@@ -563,59 +628,85 @@ img {
     margin-left: 315px;
   }
 }
-.menu-container .header__link {
-  display: block;
-  color: #212121;
-  letter-spacing: 0.02em;
-  font-size: 14px;
-  line-height: 1.17;
-  -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  -webkit-transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
-          transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
-}
-.menu-container .header__link:hover, .menu-container .header__link:focus {
-  color: #2196f3;
-}
-@media screen and (max-width: 768px) {
-  .menu-container .header__link {
-    padding: 0;
-  }
-}
-@media screen and (min-width: 768px) {
-  .menu-container .header__link {
-    padding-top: 32px;
-    padding-bottom: 32px;
-  }
-}
-.menu-container .header__link--active {
+
+/* Виділення поточної сторінки кольором*/
+.header__link--active {
   position: relative;
   color: #2196f3;
 }
-.menu-container .header__link--active::after {
-  position: absolute;
-  bottom: -1px;
-  left: 0;
-  width: 100%;
-  height: 4px;
-  content: "";
-  border-radius: 2px;
-  background-color: #2196f3;
+@media screen and (min-width: 768px) {
+  .header__link--active::after {
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    content: "";
+    border-radius: 2px;
+    background-color: #2196f3;
+  }
 }
-.menu-container .header__contact-link {
+
+/* Виділення і псевдостани посилань на сторінки*/
+.header-contact__link {
   color: #757575;
   fill: #757575;
   letter-spacing: 0.02em;
   font-weight: 500;
-  font-size: 14px;
+  line-height: 1.1716666667;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.menu-container .header__contact-container {
+.header-contact__link:hover, .header-contact__link:focus {
+  color: #2196f3;
+}
+
+@media screen and (max-width: 768px) {
+  .header-contact__link--big {
+    font-size: 34px;
+    color: #2196f3;
+  }
+}
+@media screen and (min-width: 768px) {
+  .header-contact__link--big {
+    font-size: 12px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .header-contact__link--big {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .header-contact__link--small {
+    font-size: 24px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .header-contact__link--small {
+    font-size: 12px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .header-contact__link--small {
+    font-size: 14px;
+  }
+}
+
+.header__contact-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 @media screen and (min-width: 768px) and (max-width: 1200px) {
-  .menu-container .header__contact-container {
+  .header__contact-container {
     gap: 10px;
     -webkit-box-align: baseline;
         -ms-flex-align: baseline;
@@ -626,7 +717,7 @@ img {
   }
 }
 @media screen and (min-width: 1200px) {
-  .menu-container .header__contact-container {
+  .header__contact-container {
     -webkit-box-align: baseline;
         -ms-flex-align: baseline;
             align-items: baseline;
@@ -634,24 +725,40 @@ img {
     margin-left: 315px;
   }
 }
-.menu-container .header__contact-link {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-.menu-container .header__contact-icon {
+
+.header__contact-icon {
   fill: currentColor;
   margin-right: 10px;
 }
-.menu-container .header__contact-link {
-  -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+@media screen and (max-width: 768px) {
+  .header__contact-icon {
+    display: none;
+  }
 }
-.menu-container .header__contact-link:hover, .menu-container .header__contact-link:focus {
+
+.menu__socials {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+@media screen and (min-width: 768px) {
+  .menu__socials {
+    display: none;
+  }
+}
+
+.menu__item {
+  border-right: 1px solid rgba(33, 33, 33, 0.2);
+}
+
+.menu__link {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.2222222222;
   color: #2196f3;
+  padding-left: 10px;
+  padding-right: 10px;
+  text-align: left;
 }
 
 .hero {
