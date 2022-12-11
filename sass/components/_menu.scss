@@ -47,6 +47,8 @@
     @media screen and(min-width: $tablet) {
         display: none;
     }
+
+   
 }
 
 .menu-btn.is-open .menu-btn__icon-menu {
@@ -55,6 +57,11 @@
 
 .menu-btn__icon-cross {
     display: none;
+    color: currentColor;
+    &:hover,
+    &:focus {
+        fill: $accent-color;
+    }
 }
 
 .menu-btn.is-open .menu-btn__icon-cross {

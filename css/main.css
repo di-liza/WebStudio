@@ -780,6 +780,10 @@ img {
 
 .menu-btn__icon-cross {
   display: none;
+  color: currentColor;
+}
+.menu-btn__icon-cross:hover, .menu-btn__icon-cross:focus {
+  fill: #2196f3;
 }
 
 .menu-btn.is-open .menu-btn__icon-cross {
