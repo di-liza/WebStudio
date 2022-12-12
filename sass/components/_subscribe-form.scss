@@ -1,5 +1,4 @@
 .subscribe-form {
-    
     @media screen and (min-width:$tablet){
         display: flex;
         justify-content: center;
@@ -8,13 +7,6 @@
         width: 450px;
         
     }
-    // @media screen and (max-width: $tablet) {
-    //     // margin-left: auto;
-    //     // margin-right: auto;
-    // }
-    @media screen and (max-width:$desctop) {
-    }
-
     @media screen and (min-width:$desctop) {
         align-items: flex-end;
         width: 570px;
@@ -24,11 +16,7 @@
 }
 
 .subscribe-form__containtainer{
-    // @media screen and (max-width:$tablet) {
-    //     
-    // }
     @media screen and (min-width:$tablet){
-      
        display: flex;
        flex-wrap: wrap;
        align-items: center;
@@ -64,7 +52,7 @@
     color: $primary-white-color;
     
     @media screen and (max-width:$mobile){
-        width: 300px;
+        width: 100%;
         margin-bottom: 20px;
     }
     @media screen and (min-width: $mobile) {

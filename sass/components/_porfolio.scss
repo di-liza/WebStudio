@@ -1,9 +1,9 @@
 .porfolio{
     @include section-padding ();
 
-        @media screen and (max-width: $desctop) {
-            @include section-padding ($p-top: 60px, $p-bott: 60px);
-        }
+    @media screen and (max-width: $desctop) {
+        @include section-padding ($p-top: 60px, $p-bott: 60px);
+    }
 }
 .porfolio__filter {
     @extend %list;
@@ -21,7 +21,6 @@
         justify-content: center;
         gap: 8px;
     }
-
     @media screen and (min-width:$desctop) {
         justify-content: center;
         align-items: center;

@@ -14,8 +14,6 @@
         width: 450px;
         height: 609px;
     }
-    @media screen and (min-width:$tablet){
-    }
     @media screen and (min-width:$desctop){
         min-width: 528px;
         min-height: 581px;
@@ -40,6 +38,10 @@
     fill: currentColor;
 
     transition: color 250ms $timing-function;
+
+    &:hover, &:focus{
+        color: $accent-color;
+    }
 }
 
 .modal__icon {
@@ -49,7 +51,3 @@
     fill: currentColor;
 }
 
-.modal__button:hover,
-.modal__button:focus {
-    color: $accent-color;
-}

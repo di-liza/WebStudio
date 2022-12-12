@@ -331,10 +331,12 @@ body {
 
 img {
   display: block;
-  width: 100%;
+  max-width: 100%;
+  height: auto;
 }
 
 .container {
+  width: 100%;
   margin-left: auto;
   margin-right: auto;
   padding-left: 15px;
@@ -342,17 +344,17 @@ img {
 }
 @media screen and (min-width: 480px) {
   .container {
-    width: 480px;
+    max-width: 480px;
   }
 }
 @media screen and (min-width: 768px) {
   .container {
-    width: 768px;
+    max-width: 768px;
   }
 }
 @media screen and (min-width: 1200px) {
   .container {
-    width: 1200px;
+    max-width: 1200px;
   }
 }
 
@@ -444,73 +446,6 @@ img {
   }
 }
 
-.menu {
-  background-color: #fff;
-  text-align: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-.menu.is-open {
-  display: block;
-}
-@media screen and (max-width: 768px) {
-  .menu {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    padding: 48px 40px;
-  }
-}
-@media screen and (min-width: 768px) {
-  .menu {
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    margin-left: 87px;
-  }
-}
-@media screen and (min-width: 1200px) {
-  .menu {
-    margin-left: 97px;
-  }
-}
-
-.menu-btn {
-  position: absolute;
-  display: inline-block;
-  padding: 0;
-  margin: 0;
-  top: 22px;
-  right: 15px;
-  height: 40px;
-  width: 40px;
-  border: none;
-  background-color: transparent;
-  font-family: inherit;
-  cursor: pointer;
-}
-@media screen and (min-width: 768px) {
-  .menu-btn {
-    display: none;
-  }
-}
-
-.menu-btn.is-open .menu-btn__icon-menu {
-  display: none;
-}
-
-.menu-btn__icon-cross {
-  display: none;
-}
-
-.menu-btn.is-open .menu-btn__icon-cross {
-  display: block;
-}
-
 .header__list {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -587,7 +522,6 @@ img {
         -ms-flex-align: start;
             align-items: flex-start;
     gap: 32px;
-    margin-bottom: 64px;
     margin-top: auto;
   }
 }
@@ -728,6 +662,8 @@ img {
 }
 .menu.is-open {
   display: block;
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
 }
 @media screen and (max-width: 768px) {
   .menu {
@@ -735,9 +671,15 @@ img {
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
     padding: 48px 40px;
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+    -webkit-transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
 }
 @media screen and (min-width: 768px) {
@@ -746,11 +688,35 @@ img {
         -ms-flex-align: center;
             align-items: center;
     margin-left: 87px;
+    height: 100%;
   }
 }
 @media screen and (min-width: 1200px) {
   .menu {
     margin-left: 97px;
+  }
+}
+
+.menu-box {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+@media screen and (max-width: 768px) {
+  .menu-box {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    overflow: scroll;
+  }
+}
+@media screen and (min-width: 768px) {
+  .menu-box {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
 }
 
@@ -794,6 +760,7 @@ img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  margin-top: 64px;
 }
 @media screen and (min-width: 768px) {
   .menu-socials {
@@ -946,16 +913,14 @@ img {
   -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+.modal__button:hover, .modal__button:focus {
+  color: #2196f3;
+}
 
 .modal__icon {
   width: 30px;
   height: 30px;
   fill: currentColor;
-}
-
-.modal__button:hover,
-.modal__button:focus {
-  color: #2196f3;
 }
 
 .order-form {
@@ -1126,6 +1091,9 @@ img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   margin-bottom: 20px;
   line-height: 1.714;
   letter-spacing: 0.03em;
@@ -1300,6 +1268,11 @@ img {
   line-height: 1.17;
   color: #212121;
   text-transform: uppercase;
+}
+@media screen and (max-width: 768px) {
+  .features__subtitle {
+    text-align: center;
+  }
 }
 
 .features__text {
@@ -2011,7 +1984,7 @@ img {
 }
 @media screen and (max-width: 480px) {
   .subscribe-form__data {
-    width: 300px;
+    width: 100%;
     margin-bottom: 20px;
   }
 }

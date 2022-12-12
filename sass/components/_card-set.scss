@@ -3,19 +3,11 @@
     
     margin: 0;
     padding: 0;
-    
     gap: $card-set-gap-margin;
     
-    @media screen and (min-width:$mobile) {
-        
-    }
-    @media screen and (max-width: $tablet) {
-        // width: 450px;
-    }
     @media screen and (min-width: $tablet) {
         display: flex;
         flex-wrap: wrap;
-        // width: 738px;
     }
     @media screen and (min-width: $desctop) {
         width:  $desctop;
@@ -23,9 +15,7 @@
 }
 
 .card-set__item {
-    @media screen and (min-width: $mobile) {
-    }
-    
+
     @media screen and (max-width: $tablet) {
         margin-bottom: 30px;
     }
@@ -85,19 +75,19 @@
     overflow: hidden;
 
     &::before {
-            display: inline-block;
-            position: absolute;
-    
-            width: 100%;
-            height: 100%;
-    
-            content: '';
-            background-color: $accent-color;
-            opacity: 0;
-    
-            transform: translateY(100%);
-            transition: opacity 250ms $timing-function, transform 250ms $timing-function;
-        }
+        display: inline-block;
+        position: absolute;
+
+        width: 100%;
+        height: 100%;
+
+        content: '';
+        background-color: $accent-color;
+        opacity: 0;
+
+        transform: translateY(100%);
+        transition: opacity 250ms $timing-function, transform 250ms $timing-function;
+    }
 
     .card-set__link:hover &::before {
         transform: translateY(0);
