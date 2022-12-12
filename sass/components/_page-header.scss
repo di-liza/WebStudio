@@ -82,6 +82,7 @@
     @media screen and(max-width:$tablet){
         flex-direction: column-reverse;
         align-items: flex-start;
+        flex-wrap: wrap;
         gap: 32px;
         margin-top: auto;
     }
@@ -141,6 +142,7 @@
     @media screen and (max-width:$tablet) {
         font-size: 34px;
         color: $accent-color;
+ 
     }
     @media screen and (min-width:$tablet) {
         font-size: 12px;

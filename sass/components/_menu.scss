@@ -35,7 +35,7 @@
     height: 100%;
     @media screen and(max-width:$tablet){
         flex-direction: column;
-        overflow: scroll; 
+        // overflow: scroll; 
     }
     display: flex;
     @media screen and(min-width:$tablet){
@@ -89,6 +89,7 @@
 .menu-socials {
     @extend %list;
     display: flex;
+    flex-wrap: wrap;
     margin-top: 64px;
 
     @media screen and(min-width:$tablet) {
