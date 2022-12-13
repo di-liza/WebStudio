@@ -407,6 +407,12 @@ img {
   font-size: 26px;
   line-height: 1.19;
 }
+@media screen and (max-width: 768px) {
+  .logo {
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
+}
 
 .logo--color-blue {
   color: #2196f3;
@@ -422,7 +428,6 @@ img {
   position: fixed;
   top: 0;
   left: 0;
-  height: 60px;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -430,11 +435,6 @@ img {
   z-index: 1;
   background-color: #ffffff;
   border-bottom: 1px solid #ececec;
-}
-@media screen and (min-width: 768px) {
-  .header {
-    height: 80px;
-  }
 }
 
 .header__nav {
@@ -561,7 +561,7 @@ img {
 @media screen and (min-width: 768px) {
   .header__link--active::after {
     position: absolute;
-    bottom: -1px;
+    bottom: -2px;
     left: 0;
     width: 100%;
     height: 4px;

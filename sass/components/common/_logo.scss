@@ -4,6 +4,12 @@
     font-family: 'Raleway', sans-serif;
     font-size: 26px;
     line-height: 1.19;
+    
+    @media screen and(max-width:$tablet){
+        padding-top: 16px;
+        padding-bottom: 16px;
+
+    }
 }
 
 .logo--color-blue {

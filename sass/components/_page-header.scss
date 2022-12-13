@@ -3,7 +3,7 @@
     top: 0;
     left: 0;
 
-    height: 60px;
+    // height: 60px;
     width: 100%;
     display: flex;
     
@@ -11,10 +11,10 @@
     background-color: $primary-white-color;
     border-bottom: 1px solid #ececec;
     
-    @media screen and (min-width:$tablet){
-        height: 80px;
+    // @media screen and (min-width:$tablet){
+    //     height: 80px;
         
-    }
+    // }
 }
 
 .header__nav {
@@ -112,7 +112,7 @@
     @media screen and (min-width:$tablet){
         &::after{
             position: absolute;
-            bottom: -1px;
+            bottom: -2px;
             left: 0;
         
             width: 100%;
