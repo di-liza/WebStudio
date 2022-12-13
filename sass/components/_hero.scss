@@ -12,15 +12,19 @@
     margin-left: auto;
     margin-right: auto;
 
-    height: 600px;
     max-width: 1600px;
-
+    height: 400px;
+    
     background-position: top;
     background-size: cover;
     background-repeat: no-repeat;
     background-color: $accent-background-color;
     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-        url(../images/mobile-bg.jpg);
+    url(../images/mobile-bg.jpg);
+    @media screen and(min-width:$desctop){
+        height: 600px;
+        
+    }
 }
  @media (min-device-pixel-ratio: 2),
  (min-resolution: 192dpi),
