@@ -20,8 +20,62 @@
     background-repeat: no-repeat;
     background-color: $accent-background-color;
     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-        url(../images/fone-img.jpg);
+        url(../images/mobile-bg.jpg);
 }
+ @media (min-device-pixel-ratio: 2),
+ (min-resolution: 192dpi),
+ (min-resolution: 2dppx) {
+     .hero {
+         background-image:
+             linear-gradient(to right,
+                 rgba(47, 48, 58, 0.4),
+                 rgba(47, 48, 58, 0.4)),
+             url("../images/mobile-bg-2x.jpg");
+     }
+ }
+ @media screen and (min-width: 481px) {
+     .hero {
+         background-image:
+             linear-gradient(to right,
+                 rgba(47, 48, 58, 0.4),
+                 rgba(47, 48, 58, 0.4)),
+             url("../images/tablet-bg.jpg");
+     }
+
+     @media (min-device-pixel-ratio: 2),
+     (min-resolution: 192dpi),
+     (min-resolution: 2dppx) {
+         .hero {
+             background-image:
+                 linear-gradient(to right,
+                     rgba(47, 48, 58, 0.4),
+                     rgba(47, 48, 58, 0.4)),
+                 url("../images/tablet-bg-2x.jpg");
+         }
+     }
+ }
+
+ @media screen and (min-width: 769px) {
+     .hero {
+         background-image:
+             linear-gradient(to right,
+                 rgba(47, 48, 58, 0.4),
+                 rgba(47, 48, 58, 0.4)),
+             url("../images/desctop-bg.jpg");
+     }
+
+     @media (min-device-pixel-ratio: 2),
+     (min-resolution: 192dpi),
+     (min-resolution: 2dppx) {
+         .hero {
+             background-image:
+                 linear-gradient(to right,
+                     rgba(47, 48, 58, 0.4),
+                     rgba(47, 48, 58, 0.4)),
+                 url("../images/desctop-bg-2x.jpg");
+         }
+     }
+ }
 
 .hero__title {
     margin: auto;
@@ -29,25 +83,32 @@
     max-width: 696px;
 
     color: $primary-white-color;
-    font-size: 44px;
+    font-size: 26px;
     line-height: 1.36;
     font-weight: 900;
     letter-spacing: 0.06em;
     text-align: center;
     text-transform: uppercase;
+    @media screen and(min-width:$tablet) {
+        font-size: 44px;
+    }
+
 }
 
 /* Кнопка Замовити послугу */
 .hero__btn {
     @extend %button;
-    width: 216px;
+    width: 200px;
     padding-top: 10px;
     padding-bottom: 10px;
-
+    
     color: $primary-white-color;
     background-color: $accent-color;
     letter-spacing: 0.06em;
     font-size: 16px;
     line-height: 1.875;
     font-weight: 700;
+    @media screen and(min-width:$desctop){
+        width: 216px;
+    }
 }

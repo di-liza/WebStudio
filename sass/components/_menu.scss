@@ -33,11 +33,15 @@
 }
 .menu-box{
     height: 100%;
+    display: flex;
     @media screen and(max-width:$tablet){
         flex-direction: column;
+       
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
         // overflow: scroll; 
     }
-    display: flex;
     @media screen and(min-width:$tablet){
         align-items: center;
     }

@@ -222,7 +222,13 @@
           <ul class="tasks__list">
             <li class="tasks__item">
               <div class="tasks__thumb">
-                <img src="./images/img-1.jpg" alt="процес набору коду" width="370" height="294" />
+                <img
+                  src="./images/desctop.jpg"
+                  srcset="./images/desctop.jpg 1x, ./images/desctop-2x.jpg 2x"
+                  alt="процес набору коду"
+                  width="370"
+                  height="294"
+                />
                 <div class="tasks__label">
                   <h3 class="tasks__subtitle">Десктопні додатки</h3>
                 </div>
@@ -232,7 +238,8 @@
             <li class="tasks__item">
               <div class="tasks__thumb">
                 <img
-                  src="./images/img-2.jpg"
+                  src="./images/mobile-apps.jpg"
+                  srcset="./images/mobile-apps.jpg 1x, ./images/mobile-apps-2x.jpg 2x"
                   alt="процес створення мобільного застосунку"
                   width="370"
                   height="294"
@@ -245,7 +252,13 @@
 
             <li class="tasks__item">
               <div class="tasks__thumb">
-                <img src="./images/img-3.jpg" alt="палітра кольорів" width="370" height="294" />
+                <img
+                  src="./images/design.jpg"
+                  srcset="./images/design.jpg 1x, ./images/design-2x.jpg 2x"
+                  alt="палітра кольорів"
+                  width="370"
+                  height="294"
+                />
 
                 <div class="tasks__label">
                   <h3 class="tasks__subtitle">Дизайнерські рішення</h3>
@@ -261,12 +274,34 @@
           <h2 class="team__title">Наша команда</h2>
           <ul class="team__list">
             <li class="team__item">
-              <img
-                src="./images/member-1.jpg"
-                alt="молодий бородатий хлопець в окулярах, посміхається"
-                width="270"
-                height="260"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/prodact-designer-450.jpg    1x,
+                    ./images/prodact-designer-450-2x.jpg 2x
+                  "
+                  media="(max-width: 767px)"
+                />
+                <source
+                  srcset="
+                    ./images/prodact-designer-354.jpg    1x,
+                    ./images/prodact-designer-354-2x.jpg 2x
+                  "
+                  media="(max-width: 1199px)"
+                />
+                <source
+                  srcset="
+                    ./images/prodact-designer-270.jpg    1x,
+                    ./images/prodact-designer-270-2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <img
+                  src="./images/prodact-designer-450.jpg"
+                  alt="молодий бородатий хлопець в окулярах, посміхається"
+                  height="260"
+                />
+              </picture>
               <h3 class="team__subtitle">Ігор Дем'яненко</h3>
               <p class="team__dscr">Product Designer</p>
               <div class="socials team__socials">
@@ -303,12 +338,35 @@
               </div>
             </li>
             <li class="team__item">
-              <img
-                src="./images/member-2.jpg"
-                alt="молода білява дівчина в окулярах, посміхається"
-                width="270"
-                height="260"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/frontend-developer-450.jpg    1x,
+                    ./images/frontend-developer-450-2x.jpg 2x
+                  "
+                  media="(max-width: 767px)"
+                />
+                <source
+                  srcset="
+                    ./images/frontend-developer-354.jpg    1x,
+                    ./images/frontend-developer-354-2x.jpg 2x
+                  "
+                  media="(max-width: 1199px)"
+                />
+                <source
+                  srcset="
+                    ./images/frontend-developer-270.jpg    1x,
+                    ./images/frontend-developer-270-2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <img
+                  src="./images/frontend-developer-450.jpg"
+                  alt="молода білява дівчина в окулярах, посміхається"
+                  height="260"
+                />
+              </picture>
+
               <h3 class="team__subtitle">Ольга Рєпіна</h3>
               <p class="team__dscr">Frontend Developer</p>
               <div class="socials team__socials">
@@ -345,12 +403,26 @@
               </div>
             </li>
             <li class="team__item">
-              <img
-                src="./images/member-3.jpg"
-                alt="молодий хлопець із русим волоссям та карими очима, посміхається"
-                width="270"
-                height="260"
-              />
+              <picture>
+                <source
+                  srcset="./images/marketing-450.jpg 1x, ./images/marketing-450-2x.jpg 2x"
+                  media="(max-width: 767px)"
+                />
+                <source
+                  srcset="./images/marketing-354.jpg 1x, ./images/marketing-354-2x.jpg 2x"
+                  media="(max-width: 1199px)"
+                />
+                <source
+                  srcset="./images/marketing-270.jpg 1x, ./images/marketing-270-2x.jpg 2x"
+                  media="(min-width: 1200px)"
+                />
+                <img
+                  src="./images/marketing-450.jpg"
+                  alt="молодий хлопець із русим волоссям та карими очима, посміхається"
+                  height="260"
+                />
+              </picture>
+
               <h3 class="team__subtitle">Микола Тарасов</h3>
               <p class="team__dscr">Marketing</p>
               <div class="socials team__socials">
@@ -387,12 +459,31 @@
               </div>
             </li>
             <li class="team__item">
-              <img
+              <picture>
+                <source
+                  srcset="./images/ui-designer-450.jpg 1x, ./images/ui-designer-450-2x.jpg 2x"
+                  media="(max-width: 767px)"
+                />
+                <source
+                  srcset="./images/ui-designer-354.jpg 1x, ./images/ui-designer-354-2x.jpg 2x"
+                  media="(max-width: 1199px)"
+                />
+                <source
+                  srcset="./images/ui-designer-270.jpg 1x, ./images/ui-designer-270-2x.jpg 2x"
+                  media="(min-width: 1200px)"
+                />
+                <img
+                  src="./images/ui-designer-450.jpg"
+                  alt="молодий бородатий хлопець в окулярах, посміхається"
+                  height="260"
+                />
+              </picture>
+              <!-- <img
                 src="./images/member-4.jpg"
                 alt="молодий бородатий хлопець в окулярах, посміхається"
                 width="270"
                 height="260"
-              />
+              /> -->
               <h3 class="team__subtitle">Михайло Єрмаков</h3>
               <p class="team__dscr">UI Designer</p>
               <div class="socials team__socials">

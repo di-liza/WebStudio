@@ -20,55 +20,56 @@
           <span class="logo logo--color-blue">Web</span>Studio
         </a>
         <div class="menu" id="menu" data-menu>
-          <nav class="header__nav">
-            <ul class="header__list is-open">
-              <li class="header__item">
-                <a class="header__link" href="./index.html">Студія</a>
+          <div class="menu-box">
+            <nav class="header__nav">
+              <ul class="header__list is-open">
+                <li class="header__item">
+                  <a class="header__link" href="./index.html">Студія</a>
+                </li>
+                <li class="header__item">
+                  <a class="header__link header__link--active" href="./portfolio.html">Портфоліо</a>
+                </li>
+                <li class="header__item">
+                  <a class="header__link" href="">Контакти</a>
+                </li>
+              </ul>
+            </nav>
+            <ul class="header-contact">
+              <li class="header-contact__item">
+                <a
+                  class="header-contact__link header-contact__link--small"
+                  href="mailto:info@devstudio.com"
+                >
+                  <svg class="header__contact-icon" width="16" height="12">
+                    <use href="./images/icons.svg#icon-envelope"></use>
+                  </svg>
+                  info@devstudio.com
+                </a>
               </li>
-              <li class="header__item">
-                <a class="header__link header__link--active" href="./portfolio.html">Портфоліо</a>
-              </li>
-              <li class="header__item">
-                <a class="header__link" href="">Контакти</a>
+              <li class="header-contact__item">
+                <a class="header-contact__link header-contact__link--big" href="tel:+380961111111">
+                  <svg class="header__contact-icon" width="10" height="16">
+                    <use href="./images/icons.svg#icon-smartphone"></use>
+                  </svg>
+                  +38 096 111 11 11</a
+                >
               </li>
             </ul>
-          </nav>
-
-          <ul class="header-contact">
-            <li class="header-contact__item">
-              <a
-                class="header-contact__link header-contact__link--small"
-                href="mailto:info@devstudio.com"
-              >
-                <svg class="header__contact-icon" width="16" height="12">
-                  <use href="./images/icons.svg#icon-envelope"></use>
-                </svg>
-                info@devstudio.com
-              </a>
-            </li>
-            <li class="header-contact__item">
-              <a class="header-contact__link header-contact__link--big" href="tel:+380961111111">
-                <svg class="header__contact-icon" width="10" height="16">
-                  <use href="./images/icons.svg#icon-smartphone"></use>
-                </svg>
-                +38 096 111 11 11</a
-              >
-            </li>
-          </ul>
-          <ul class="menu-socials">
-            <li class="menu-socials__item">
-              <a href="" class="menu-socials__link">Instagram</a>
-            </li>
-            <li class="menu-socials__item">
-              <a href="" class="menu-socials__link">Twitter</a>
-            </li>
-            <li class="menu-socials__item">
-              <a href="" class="menu-socials__link">Facebook</a>
-            </li>
-            <li class="menu-socials__item">
-              <a href="" class="menu-socials__link">LinkedIn</a>
-            </li>
-          </ul>
+            <ul class="menu-socials">
+              <li class="menu-socials__item">
+                <a href="" class="menu-socials__link">Instagram</a>
+              </li>
+              <li class="menu-socials__item">
+                <a href="" class="menu-socials__link">Twitter</a>
+              </li>
+              <li class="menu-socials__item">
+                <a href="" class="menu-socials__link">Facebook</a>
+              </li>
+              <li class="menu-socials__item">
+                <a href="" class="menu-socials__link">LinkedIn</a>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
       <button
@@ -78,7 +79,7 @@
         aria-expanded="false"
         aria-controls="menu"
       >
-        <svg width="40" height="40" aria-label="Перемикач мобільного меню">
+        <svg class="menu-btn__icons" width="40" height="40" aria-label="Перемикач мобільного меню">
           <use class="menu-btn__icon-menu" href="./images/icons.svg#menu"></use>
           <use class="menu-btn__icon-cross" href="./images/icons.svg#cross"></use>
         </svg>
@@ -111,12 +112,26 @@
             <li class="card-set__item">
               <a class="card-set__link" href="#">
                 <div class="card-set__img-thumb">
-                  <img
-                    src="./images/web-site.jpg"
-                    alt="ноутбук із зображенням веб сайту компанії"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      srcset="./images/web-site-450.jpg 1x, ./images/web-site-450-2x.jpg 2x"
+                      media="(max-width: 767px)"
+                    />
+                    <source
+                      srcset="./images/web-site-354.jpg 1x, ./images/web-site-354-2x.jpg 2x"
+                      media="(max-width: 1199px)"
+                    />
+                    <source
+                      srcset="./images/web-site-370.jpg 1x, ./images/web-site-370-2x.jpg 2x"
+                      media="(min-width: 1200px)"
+                    />
+                    <img
+                      src="./images/web-site-450.jpg"
+                      alt="ноутбук із зображенням веб сайту компанії"
+                      height="260"
+                    />
+                  </picture>
+
                   <p class="card-set__text">
                     Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
                     Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи
@@ -133,12 +148,26 @@
             <li class="card-set__item">
               <a class="card-set__link" href="#">
                 <div class="card-set__img-thumb">
-                  <img
-                    src="./images/poster.jpg"
-                    alt="постер що анонсує баскетбольний матч"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      srcset="./images/poster-450.jpg 1x, ./images/poster-450-2x.jpg 2x"
+                      media="(max-width: 767px)"
+                    />
+                    <source
+                      srcset="./images/poster-354.jpg 1x, ./images/poster-354-2x.jpg 2x"
+                      media="(max-width: 1199px)"
+                    />
+                    <source
+                      srcset="./images/poster-370.jpg 1x, ./images/poster-370-2x.jpg 2x"
+                      media="(min-width: 1200px)"
+                    />
+                    <img
+                      src="./images/poster-450.jpg"
+                      alt="постер що анонсує баскетбольний матч"
+                      height="260"
+                    />
+                  </picture>
+
                   <p class="card-set__text">
                     Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
                     Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи
@@ -155,12 +184,22 @@
             <li class="card-set__item">
               <a class="card-set__link" href="#">
                 <div class="card-set__img-thumb">
-                  <img
-                    src="./images/restaurant.jpg"
-                    alt="логотип ресторану"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      srcset="./images/restaurant-450.jpg 1x, ./images/restaurant-450-2x.jpg 2x"
+                      media="(max-width: 767px)"
+                    />
+                    <source
+                      srcset="./images/restaurant-354.jpg 1x, ./images/restaurant-354-2x.jpg 2x"
+                      media="(max-width: 1199px)"
+                    />
+                    <source
+                      srcset="./images/restaurant-370.jpg 1x, ./images/restaurant-370-2x.jpg 2x"
+                      media="(min-width: 1200px)"
+                    />
+                    <img src="./images/restaurant-450.jpg" alt="логотип ресторану" height="260" />
+                  </picture>
+
                   <p class="card-set__text">
                     Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
                     Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи
@@ -177,7 +216,21 @@
             <li class="card-set__item">
               <a class="card-set__link" href="#">
                 <div class="card-set__img-thumb">
-                  <img src="./images/headphones.jpg" alt="навушники" width="370" height="294" />
+                  <picture>
+                    <source
+                      srcset="./images/headphones-450.jpg 1x, ./images/headphones-450-2x.jpg 2x"
+                      media="(max-width: 767px)"
+                    />
+                    <source
+                      srcset="./images/headphones-354.jpg 1x, ./images/headphones-354-2x.jpg 2x"
+                      media="(max-width: 1199px)"
+                    />
+                    <source
+                      srcset="./images/headphones-370.jpg 1x, ./images/headphones-370-2x.jpg 2x"
+                      media="(min-width: 1200px)"
+                    />
+                    <img src="./images/headphones-450.jpg" alt="навушники" height="260" />
+                  </picture>
                   <p class="card-set__text">
                     Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
                     Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи
@@ -194,7 +247,21 @@
             <li class="card-set__item">
               <a class="card-set__link" href="#">
                 <div class="card-set__img-thumb">
-                  <img src="./images/boxes.jpg" alt="коробки" width="370" height="294" />
+                  <picture>
+                    <source
+                      srcset="./images/boxes-450.jpg 1x, ./images/boxes-450-2x.jpg 2x"
+                      media="(max-width: 767px)"
+                    />
+                    <source
+                      srcset="./images/boxes-354.jpg 1x, ./images/boxes-354-2x.jpg 2x"
+                      media="(max-width: 1199px)"
+                    />
+                    <source
+                      srcset="./images/boxes-370.jpg 1x, ./images/boxes-370-2x.jpg 2x"
+                      media="(min-width: 1200px)"
+                    />
+                    <img src="./images/boxes-450.jpg" alt="коробки" height="260" />
+                  </picture>
                   <p class="card-set__text">
                     Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
                     Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи
@@ -211,12 +278,26 @@
             <li class="card-set__item">
               <a class="card-set__link" href="#">
                 <div class="card-set__img-thumb">
-                  <img
-                    src="./images/monitor.jpg"
-                    alt="монітор з демонстрацією веб сайту"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      srcset="./images/monitor-450.jpg 1x, ./images/monitor-450-2x.jpg 2x"
+                      media="(max-width: 767px)"
+                    />
+                    <source
+                      srcset="./images/monitor-354.jpg 1x, ./images/monitor-354-2x.jpg 2x"
+                      media="(max-width: 1199px)"
+                    />
+                    <source
+                      srcset="./images/monitor-370.jpg 1x, ./images/monitor-370-2x.jpg 2x"
+                      media="(min-width: 1200px)"
+                    />
+                    <img
+                      src="./images/monitor-450.jpg"
+                      alt="монітор з демонстрацією веб сайту"
+                      height="260"
+                    />
+                  </picture>
+
                   <p class="card-set__text">
                     Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
                     Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи
@@ -233,7 +314,21 @@
             <li class="card-set__item">
               <a class="card-set__link" href="#">
                 <div class="card-set__img-thumb">
-                  <img src="./images/magazine.jpg" alt="журнал" width="370" height="294" />
+                  <picture>
+                    <source
+                      srcset="./images/magazine-450.jpg 1x, ./images/magazine-450-2x.jpg 2x"
+                      media="(max-width: 767px)"
+                    />
+                    <source
+                      srcset="./images/magazine-354.jpg 1x, ./images/magazine-354-2x.jpg 2x"
+                      media="(max-width: 1199px)"
+                    />
+                    <source
+                      srcset="./images/magazine-370.jpg 1x, ./images/magazine-370-2x.jpg 2x"
+                      media="(min-width: 1200px)"
+                    />
+                    <img src="./images/magazine-450.jpg" alt="журнал" height="260" />
+                  </picture>
                   <p class="card-set__text">
                     Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
                     Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи
@@ -250,7 +345,21 @@
             <li class="card-set__item">
               <a class="card-set__link" href="#">
                 <div class="card-set__img-thumb">
-                  <img src="./images/label.jpg" alt="етикетка" width="370" height="294" />
+                  <picture>
+                    <source
+                      srcset="./images/label-450.jpg 1x, ./images/label-450-2x.jpg 2x"
+                      media="(max-width: 767px)"
+                    />
+                    <source
+                      srcset="./images/label-354.jpg 1x, ./images/label-354-2x.jpg 2x"
+                      media="(max-width: 1199px)"
+                    />
+                    <source
+                      srcset="./images/label-370.jpg 1x, ./images/label-370-2x.jpg 2x"
+                      media="(min-width: 1200px)"
+                    />
+                    <img src="./images/label-450.jpg" alt="етикетка" height="260" />
+                  </picture>
                   <p class="card-set__text">
                     Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
                     Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи
@@ -267,7 +376,21 @@
             <li class="card-set__item">
               <a class="card-set__link" href="#">
                 <div class="card-set__img-thumb">
-                  <img src="./images/laptop.jpg" alt="ноутбук" width="370" height="294" />
+                  <picture>
+                    <source
+                      srcset="./images/laptop-450.jpg 1x, ./images/laptop-450-2x.jpg 2x"
+                      media="(max-width: 767px)"
+                    />
+                    <source
+                      srcset="./images/laptop-354.jpg 1x, ./images/laptop-354-2x.jpg 2x"
+                      media="(max-width: 1199px)"
+                    />
+                    <source
+                      srcset="./images/laptop-370.jpg 1x, ./images/laptop-370-2x.jpg 2x"
+                      media="(min-width: 1200px)"
+                    />
+                    <img src="./images/laptop-450.jpg" alt="ноутбук" height="260" />
+                  </picture>
                   <p class="card-set__text">
                     Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
                     Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи
