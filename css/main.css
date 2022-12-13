@@ -786,6 +786,7 @@ img {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  gap: 10px;
   margin-top: 64px;
 }
 @media screen and (min-width: 768px) {
@@ -794,8 +795,9 @@ img {
   }
 }
 
-.menu-socials__item {
+.menu-socials__item:not(:last-child) {
   border-right: 1px solid rgba(33, 33, 33, 0.2);
+  padding-right: 10px;
 }
 
 .menu-socials__link {
@@ -803,8 +805,6 @@ img {
   font-size: 18px;
   line-height: 1.2222222222;
   color: #2196f3;
-  padding-left: 10px;
-  padding-right: 10px;
   text-align: left;
 }
 
