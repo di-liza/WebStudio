@@ -49,7 +49,9 @@
 }
 .menu-btn {
     position: absolute;
-    display: inline-block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     padding: 0;
     margin: 0;
     top: 22px;
@@ -67,7 +69,10 @@
         display: none;
     }
 }
-
+// .menu-btn__icon-menu{
+//     width: 24px;
+//     height: 16px;
+// }
 .menu-btn.is-open .menu-btn__icon-menu {
     display: none;
 }
