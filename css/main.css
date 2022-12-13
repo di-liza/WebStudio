@@ -591,15 +591,19 @@ img {
   color: #2196f3;
 }
 
-@media screen and (max-width: 768px) {
+.header-contact__link--big {
+  font-size: 27px;
+  color: #2196f3;
+}
+@media screen and (min-width: 480px) {
   .header-contact__link--big {
     font-size: 34px;
-    color: #2196f3;
   }
 }
 @media screen and (min-width: 768px) {
   .header-contact__link--big {
     font-size: 12px;
+    color: #757575;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -608,7 +612,10 @@ img {
   }
 }
 
-@media screen and (max-width: 768px) {
+.header-contact__link--small {
+  font-size: 20px;
+}
+@media screen and (min-width: 480px) {
   .header-contact__link--small {
     font-size: 24px;
   }
