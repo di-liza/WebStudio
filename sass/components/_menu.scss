@@ -90,6 +90,7 @@
 .menu-btn__icon-cross {
     display: none;
     color: currentColor;
+    transition: color 250ms $timing-function;
     &:hover,
     &:focus {
         fill: $accent-color;
