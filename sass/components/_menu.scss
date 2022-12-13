@@ -1,25 +1,24 @@
 .menu {
     background-color: #fff;
     text-align: center;
-    display: flex;
+    display: block;
 
-    &.is-open {
-        display: block;
-        transform: translateX(0);
-    }
-    
     @media screen and(max-width:$tablet) {
-        display: none;
+
+        transform: translateX(100%);
+        transition: transform 500ms $timing-function;
+        &.is-open {
+            display: block;
+            transform: translateX(0);
+        }
+    
         position: fixed;
         top: 0;
         left: 0;
         width: 100vw;
         height: 100vh;
         padding: 48px 40px;
-        
-        transform: translateX(100%);
-        transition: transform 250ms $timing-function;
-        
+        display: block;
     }
     @media screen and(min-width:$tablet) {
         align-items: center;
@@ -36,21 +35,18 @@
     display: flex;
     @media screen and(max-width:$tablet){
         flex-direction: column;
-       
+       overflow: auto;
         width: 100%;
         margin-left: auto;
         margin-right: auto;
-        // overflow: scroll; 
+
     }
     @media screen and(min-width:$tablet){
         align-items: center;
     }
 
 }
-// .menu-btn__icon-menu{
-//     width: 24px;
-//     height: 16px;
-// }
+
 .menu-btn {
     position: absolute;
     display: flex;
@@ -73,20 +69,11 @@
         display: none;
     }
 }
-// .menu-btn__icon-menu{
-//     width: 24px;
-//     height: 16px;
-// }
+
 .menu-btn.is-open .menu-btn__icon-menu {
     display: none;
 }
-// .menu-btn__icons{
-//     &:hover,
-//     &:focus &-icon-cross{
-//         fill: $accent-color;
-//     }
-   
-// }
+
 .menu-btn__icon-cross {
     display: none;
     color: currentColor;
@@ -129,3 +116,7 @@
     color: $accent-color;
     text-align: left;
 }
+
+
+
+
