@@ -16,6 +16,8 @@ Welcome to the GitHub repository for "WebStudio," a web studio's online presence
 
 5. **Service Presentation**: The website provides a detailed presentation of the studio's services.
 
+6. **Retina-Ready Images**: All images on this website are optimized for both Regular and Retina displays, ensuring the best visual experience for all users.
+
 ## Usage
 
 To use this project, simply clone the repository and open the `index.html` file in your web browser. You can also customize and extend the code to suit your specific needs.
