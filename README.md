@@ -2,7 +2,8 @@
 
 Welcome to the GitHub repository for "WebStudio," a web studio's online presence. This repository contains the source code for a website, which serves as a digital company's card.
 
-![image](https://github.com/di-liza/WebStudio/assets/114363326/1d54415e-5c78-4b30-915f-ff431f55fbf7)
+![image](https://github.com/di-liza/WebStudio/assets/114363326/f8457834-6486-4aaf-840a-6bf143c3ce08)
+
 
 ## Features
 
